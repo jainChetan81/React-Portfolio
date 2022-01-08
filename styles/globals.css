@@ -3,28 +3,43 @@
 @tailwind utilities;
 
 :root {
+	--transition-speed: 0.5s;
+	scroll-padding-top: 10rem;
+	--transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
+	--br: 0.5em;
 	--pink: #e31f71;
 	--black: #212121;
 	--green: #23ce6b;
 	--blue: #016fb9;
-	scroll-padding-top: 10rem;
-	--text-primary: #b6b6b6;
-	--text-secondary: #ececec;
-	--bg-primary: #23232e;
-	--bg-secondary: #141418;
-	--transition-speed: 0.5s;
 	--clr-dark: rgb(13, 17, 19);
 	--clr-light: rgb(255, 255, 255);
 	--clr-secondary: rgb(0, 66, 199);
-	--br: 0.5em;
-	--transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
+}
+
+body.body.dark {
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #2b2b2b;
+	--bg-secondary: #141418;
+	--bg-main: #212121;
+	--card-rank: rgba(0, 0, 0, 0.65);
+	--card-background: #282e36;
+}
+body.body {
+	--text-primary: #1f1f1f;
+	--text-secondary: #000000;
+	--bg-primary: #beb8b8;
+	--bg-secondary: #e4e4e4;
+	--bg-main: #d4d4d4;
+	--card-rank: rgba(255, 255, 255, 0.65);
+	--card-background: #9ca3aa;
 }
 body {
 	transition: 0.5s;
 	font-size: 1rem;
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--black);
-	color: #fff;
+	background-color: var(--bg-main);
+	color: var(--text-secondary);
 	overflow-x: hidden;
 }
 body,
@@ -63,7 +78,7 @@ main #tsparticles {
 @media (max-width: 600px) {
 	main {
 		margin: 0;
-		padding: 0 4rem;
+		padding: 0 2rem;
 	}
 }
 @media (max-width: 360px) {

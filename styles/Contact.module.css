@@ -33,7 +33,7 @@ section.contact .contacts .contact_info img {
 	width: 40px;
 }
 section.contact .contacts .contact_info a {
-	color: var(--black);
+	color: var(--text-secondary);
 	font-weight: 500;
 }
 section.contact .contacts .contact_info:hover {
@@ -68,13 +68,13 @@ section.contact .form form textarea {
 	outline: none;
 	border: none;
 	background: none;
-	border: 1px solid #fff;
-	color: white;
+	border: 1px solid var(--text-secondary);
+	color: var(--text-primary);
 	font-weight: 600;
 }
 section.contact .form form input::placeholder,
 section.contact .form form textarea::placeholder {
-	color: #fff;
+	color: var(--text-primary);
 }
 section.contact .form form textarea {
 	height: 200px;
@@ -86,7 +86,7 @@ section.contact .form form button {
 	border: none;
 	cursor: pointer;
 	background-color: var(--green);
-	color: #fff f;
+	color: var(--bg-secondary);
 	border-radius: 20px;
 	font-weight: 500;
 	transition: filter 0.25s;

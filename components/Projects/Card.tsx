@@ -6,27 +6,31 @@ type Props = {
 	index: number;
 	name: string;
 	description: string;
+	externalUrl?: string;
+	githubUrl: string;
 };
-const Card: FC<Props> = ({ index, name, description }) => {
+const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) => {
 	return (
 		<article className={styles.card}>
 			<span className={styles.rank}>{index + 1}</span>
 			<div className={styles.front}>
 				<Image
 					className={styles.thumbnail}
-					src="https://ik.imagekit.io/clhowstalgz/games/anthem.jpg?tr=w-250,h-300"
+					src="https://ik.imagekit.io/clhowstalgz/games/skyrim.jpg?tr=w-250,h-300"
 					height={300}
 					width={250}
 					alt="game"
 				/>
 				<h2 className={styles.name}>{name}</h2>
 				<p className={styles.links}>
-					<a href="https://github.com/joaotuliojt/github-search" target="_blank" rel="noreferrer">
+					<a href={githubUrl} target="_blank" rel="noreferrer">
 						<FaGithub />
 					</a>
-					<a href="https://github-search-blond.vercel.app/" target="_blank" rel="noreferrer">
-						<FaExternalLinkAlt />
-					</a>
+					{externalUrl && (
+						<a href={externalUrl} target="_blank" rel="noreferrer">
+							<FaExternalLinkAlt />
+						</a>
+					)}
 				</p>
 				<div className={styles.stats}>
 					<p className={styles.viewers}>539.9k</p>

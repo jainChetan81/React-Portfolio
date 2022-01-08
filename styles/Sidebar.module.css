@@ -1,6 +1,6 @@
 .navbar {
 	position: fixed;
-	background-color: #2b2b2b;
+	background-color: var(--bg-primary);
 	transition: width 600ms ease;
 	overflow: scroll;
 	overflow: hidden;
@@ -134,13 +134,6 @@
 	.navbar:hover .logo_text {
 		left: 0px;
 	}
-}
-
-.light {
-	--text-primary: #1f1f1f;
-	--text-secondary: #000000;
-	--bg-primary: #ffffff;
-	--bg-secondary: #e4e4e4;
 }
 
 #darkIcon {

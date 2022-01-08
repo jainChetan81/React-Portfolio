@@ -1,10 +1,16 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import type { FC } from "react";
+import { FC, LegacyRef, useEffect, useRef, useState } from "react";
 import { Footer, Sidebar } from ".";
 import type { LayoutType } from "../@types";
 
 const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
+	const bodyRef: LegacyRef<HTMLBodyElement> = useRef(null);
+	const [isDark, setIsDark] = useState<boolean>(true);
+
+	useEffect(() => {
+		bodyRef?.current?.classList.toggle("dark");
+	}, [isDark]);
 	return (
 		<>
 			<Head>
@@ -16,16 +22,18 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="manifest.json" />
 			</Head>
-			<Sidebar />
-			<main>{children}</main>
-			<Footer />
+			<body className="body" ref={bodyRef}>
+				<Sidebar isDark={isDark} setIsDark={setIsDark} />
+				<main>{children}</main>
+				<Footer />
+			</body>
 		</>
 	);
 };
 Layout.defaultProps = {
 	title: "Portfolio - Chetan Jain",
 	description: "A Portfolio of Chetan Jain to showcase various skills and projects",
-	keywords: "[NextJs, Tailwind, Typescripts]",
+	keywords: "[NextJs, Tailwind, Typescript]",
 };
 Layout.propTypes = {
 	title: PropTypes.string,
