@@ -1,8 +1,5 @@
-import stream from "stream";
-import { promisify } from "util";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const pipeline = promisify(stream.pipeline);
 const url: string = `${process.env.URL}/chetan-resume.pdf`;
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse): Promise<void> => {
