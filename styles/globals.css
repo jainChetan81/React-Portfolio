@@ -20,6 +20,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background-color: var(--black);
 	color: #fff;
+	overflow-x: hidden;
 }
 body,
 input,
@@ -34,8 +35,8 @@ main {
 	position: relative;
 	z-index: 0;
 	margin-left: 8rem;
-	overflow-x: hidden;
 	padding: 0px 1rem;
+	overflow-x: hidden;
 }
 body::-webkit-scrollbar {
 	width: 0.25rem;
@@ -47,8 +48,8 @@ body::-webkit-scrollbar-thumb {
 	background-color: rgb(25, 102, 25);
 }
 section {
-	/* height: 100vh; */
 	margin-top: 100px;
+	overflow-x: hidden;
 }
 main #tsparticles {
 	position: absolute;

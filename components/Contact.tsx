@@ -1,10 +1,30 @@
 import styles from "../styles/Contact.module.css";
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, FormEvent, MutableRefObject, useRef } from "react";
+import emailjs from "emailjs-com";
 
 const Contact: FC = () => {
-	const [isValid, setIsValid] = useState(false);
-	const handleSubmit = () => {};
+	const form: MutableRefObject<HTMLFormElement | null> = useRef(null);
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		if (!form.current) return;
+		emailjs
+			.sendForm(
+				`${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+				`${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
+				form.current,
+				`${process.env.NEXT_PUBLIC_USER_ID}`
+			)
+			.then(
+				(result) => {
+					form.current?.reset();
+					console.log(`result: `, result.text);
+				},
+				(error) => {
+					console.error("error: ", error.text);
+				}
+			);
+	};
 	return (
 		<section className={styles.contact} id="contact">
 			<header>
@@ -33,12 +53,20 @@ const Contact: FC = () => {
 			</div>
 			<div className={styles.form}>
 				<h2>Get in touch using the form below</h2>
-				<form onSubmit={handleSubmit}>
-					<input placeholder="Email" id="email" type="email" name="email" />
-					<textarea placeholder="Leave your Message" id="message" name="message" />
-					<button type="submit" disabled={!isValid}>
-						Submit
-					</button>
+				<form ref={form} onSubmit={handleSubmit}>
+					<input id="name" name="from_name" placeholder="John Doe" type="text" autoComplete="name" required />
+					<input id="subject" name="subject" placeholder="Subject" type="text" required />
+					<input placeholder="Email" id="email" type="email" name="email" autoComplete="email" required />
+					<textarea
+						placeholder="Leave your Message"
+						id="message"
+						name="message"
+						rows={3}
+						minLength={50}
+						maxLength={100}
+						spellCheck="true"
+					/>
+					<button type="submit">Submit</button>
 				</form>
 			</div>
 		</section>

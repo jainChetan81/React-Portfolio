@@ -122,6 +122,7 @@ const About: FC = () => {
 						alt="Chetan Jain Profile"
 						height={600}
 						width={500}
+						className="rounded"
 					/>
 				</ScrollAnimation>
 			</div>

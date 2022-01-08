@@ -44,6 +44,9 @@
 	background: var(--bg-secondary);
 	color: var(--text-secondary);
 }
+.nav_link:hover svg {
+	color: #df49a6;
+}
 
 .link_text {
 	display: none;
