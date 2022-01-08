@@ -1,4 +1,5 @@
 import styles from "../styles/Contact.module.css";
+import Image from "next/image";
 import { FC, useState } from "react";
 
 const Contact: FC = () => {
@@ -12,11 +13,21 @@ const Contact: FC = () => {
 			</header>
 			<div className={styles.contacts}>
 				<div className={styles.contact_info}>
-					<img src="https://ik.imagekit.io/clhowstalgz/icons/email-icon.svg" alt="Email" />
+					<Image
+						src="https://ik.imagekit.io/clhowstalgz/icons/email-icon.svg"
+						alt="Email"
+						width={40}
+						height={40}
+					/>
 					<a href="jain.cj.chetan@gmail.com">jain.cj.chetan@gmail.com</a>
 				</div>
 				<div className={styles.contact_info}>
-					<img src="https://ik.imagekit.io/clhowstalgz/icons/phone-icon.svg" alt="Email" />
+					<Image
+						src="https://ik.imagekit.io/clhowstalgz/icons/phone-icon.svg"
+						alt="Phone"
+						width={40}
+						height={40}
+					/>
 					<a href="tel:+5531981213843">(+91) 87007-76723</a>
 				</div>
 			</div>
