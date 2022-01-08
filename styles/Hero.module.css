@@ -1,5 +1,4 @@
 section.hero {
-	padding-block: 15%;
 	display: flex;
 	justify-content: space-between;
 	gap: 8rem;
@@ -38,7 +37,6 @@ section.hero .hero_image img {
 @media (max-width: 960px) {
 	section.hero {
 		display: block;
-		margin-top: 15%;
 	}
 	section.hero .hero_text h1 {
 		font-size: 5rem;

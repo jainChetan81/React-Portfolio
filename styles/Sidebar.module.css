@@ -1,6 +1,6 @@
 .navbar {
 	position: fixed;
-	background-color: var(--bg-primary);
+	background-color: #2b2b2b;
 	transition: width 600ms ease;
 	overflow: scroll;
 	overflow: hidden;

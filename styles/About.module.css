@@ -1,11 +1,10 @@
 section.about {
-	margin-top: 12rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
 }
 section.about .hard_skills {
-	margin-top: 1.6rem;
+	margin-block: 1.6rem;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -59,6 +58,7 @@ section.about .about_image img:hover {
 	}
 	section.about .about_image {
 		display: flex;
+		justify-content: center;
 	}
 	section.about .hard_skills {
 		justify-content: center;

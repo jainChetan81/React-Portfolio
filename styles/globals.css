@@ -46,6 +46,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background-color: rgb(25, 102, 25);
 }
+section {
+	/* height: 100vh; */
+	margin-top: 100px;
+}
 main #tsparticles {
 	position: absolute;
 	left: 0;
