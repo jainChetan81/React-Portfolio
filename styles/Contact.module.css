@@ -1,0 +1,118 @@
+section.contact {
+	margin-top: 20rem;
+}
+section.contact header {
+	text-align: center;
+}
+section.contact header h2 {
+	text-align: center;
+	font-size: 4rem;
+}
+section.contact header p {
+	color: var(--green);
+	font-weight: 500;
+}
+section.contact .contacts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	place-items: center;
+	margin-top: 8rem;
+}
+section.contact .contacts .contact_info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	max-width: 40rem;
+	gap: 2rem;
+	background-color: var(--green);
+	border-radius: 1.4rem;
+	padding: 1.6rem 2.8rem;
+	transition: background-color 0.25s;
+}
+section.contact .contacts .contact_info img {
+	width: 4rem;
+}
+section.contact .contacts .contact_info a {
+	color: var(--black);
+	font-weight: 500;
+}
+section.contact .contacts .contact_info:hover {
+	background-color: var(--pink);
+}
+section.contact .contacts .contact_info:hover a {
+	color: #fff;
+}
+
+section.contact .form {
+	margin-top: 10rem;
+	display: grid;
+	place-items: center;
+}
+section.contact .form h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+section.contact .form form {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+}
+section.contact .form form input,
+section.contact .form form textarea {
+	width: 60rem;
+	padding: 1rem 2rem;
+	border-radius: 1.6rem;
+	outline: none;
+	border: none;
+	background: none;
+	border: 1px solid #fff;
+	color: white;
+	font-weight: 600;
+}
+section.contact .form form input::placeholder,
+section.contact .form form textarea::placeholder {
+	color: #fff;
+}
+section.contact .form form textarea {
+	height: 20rem;
+	overflow-y: auto;
+}
+section.contact .form form button {
+	padding: 1rem 6rem;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	background-color: var(--green);
+	color: #fff f;
+	border-radius: 2rem;
+	font-weight: 500;
+	transition: filter 0.25s;
+}
+section.contact .form form button:hover {
+	filter: brightness(0.8);
+}
+@media (max-width: 740px) {
+	section.contact .form form {
+		width: 100%;
+	}
+	section.contact .form form input,
+	section.contact .form form textarea {
+		width: 100%;
+	}
+}
+
+@media (max-width: 960px) {
+	section.contact .contacts {
+		flex-direction: column;
+	}
+	section.contact .contacts .contact_info {
+		width: 100%;
+		flex-direction: column;
+	}
+}

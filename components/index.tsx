@@ -5,4 +5,6 @@ import Modal from "./Modal";
 import Particle from "./Particle";
 import Hero from "./Hero";
 import About from "./About";
-export { Layout, Modal, Header, Footer, Particle, Hero, About };
+import Projects from "./Projects";
+import Contact from "./Contact";
+export { Layout, Modal, Header, Footer, Particle, Hero, About, Projects, Contact };

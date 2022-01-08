@@ -13,37 +13,37 @@ header.headerFixed {
 	transition: 0.5s;
 	transition: 0.5s;
 }
-.headerFixed a {
+header.headerFixed a {
 	transition: 0.5s;
 	color: #fff;
 }
-.headerFixed .menu,
-.headerFixed .menu:before,
-.headerFixed .menu:after {
+header.headerFixed .menu,
+header.headerFixed .menu:before,
+header.headerFixed .menu:after {
 	background-color: var(--black);
 }
-.headerFixed .menu.active {
+header.headerFixed .menu.active {
 	background-color: rgba(555, 555, 555, 0);
 }
-.headerFixed .logo {
+header.headerFixed .logo {
 	font-size: 3rem;
 	color: #fff;
 }
-.headerFixed .logo::first-letter {
+header.headerFixed .logo::first-letter {
 	color: var(--green);
 }
-.headerFixed a {
+header.headerFixed a {
 	transition: 0.5s;
 }
-.headerFixed .menu,
-.headerFixed .menu:before,
-.headerFixed .menu:after {
+header.headerFixed .menu,
+header.headerFixed .menu:before,
+header.headerFixed .menu:after {
 	background-color: var(--black);
 }
-.headerFixed .menu.active {
+header.headerFixed .menu.active {
 	background-color: rgba(555, 555, 555, 0);
 }
-.headerFixed .button {
+header.headerFixed .button {
 	border: none;
 	cursor: pointer;
 	background-color: var(--green);
@@ -52,33 +52,33 @@ header.headerFixed {
 	font-weight: 500;
 	transition: filter 0.25s;
 }
-.headerFixed .button:hover {
+header.headerFixed .button:hover {
 	filter: brightness(0.8);
 }
-.headerFixed nav {
+header.headerFixed nav {
 	display: flex;
 	align-items: center;
 	gap: 1.8rem;
 }
-.headerFixed nav a {
+header.headerFixed nav a {
 	padding: 0.6rem;
 	font-family: "Red Hat Display", sans-serif;
 	font-weight: 500;
 	text-transform: uppercase;
 	transition: all ease-in-out 0.25s;
 }
-.headerFixed nav a.button {
+header.headerFixed nav a.button {
 	padding: 0.6rem 5rem;
 	transition: all ease-in-out 0.25s;
 }
-.headerFixed nav a:hover {
+header.headerFixed nav a:hover {
 	transform: scale(1.2);
 }
-.headerFixed .menu-container {
+header.headerFixed .menu-container {
 	cursor: pointer;
 	padding: 0.6rem 0;
 }
-.headerFixed .menu {
+header.headerFixed .menu {
 	width: 2rem;
 	height: 0.2rem;
 	background: #fff f;
@@ -86,25 +86,25 @@ header.headerFixed {
 	cursor: pointer;
 	display: none;
 }
-.headerFixed .menu:before {
+header.headerFixed .menu:before {
 	bottom: 0.5rem;
 }
-.headerFixed .menu:after {
+header.headerFixed .menu:after {
 	top: 0.5rem;
 }
-.headerFixed .menu.active:before {
+header.headerFixed .menu.active:before {
 	bottom: 0;
 	transform: rotate(45deg);
 }
-.headerFixed .menu.active:after {
+header.headerFixed .menu.active:after {
 	top: 0;
 	transform: rotate(135deg);
 }
-.headerFixed .menu.active {
+header.headerFixed .menu.active {
 	background-color: rgba(0, 0, 0, 0);
 }
-.headerFixed .menu:before,
-.headerFixed .menu:after {
+header.headerFixed .menu:before,
+header.headerFixed .menu:after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -114,12 +114,12 @@ header.headerFixed {
 	cursor: pointer;
 	transition: 0.6s;
 }
-.headerFixed input[type="checkbox"] {
+header.headerFixed input[type="checkbox"] {
 	height: 0;
 	width: 0;
 	visibility: hidden;
 }
-.headerFixed label {
+header.headerFixed label {
 	cursor: pointer;
 	text-indent: -9999px;
 	width: 55px;
@@ -136,11 +136,11 @@ header.headerFixed {
 	right: 10px;
 }
 @media only screen and (max-width: 800px) {
-	.headerFixed label {
+	header.headerFixed label {
 		position: relative;
 	}
 }
-.headerFixed label:after {
+header.headerFixed label:after {
 	content: "";
 	background: #fff;
 	width: 20px;
@@ -153,10 +153,10 @@ header.headerFixed {
 	left: 4px;
 	transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
 }
-.headerFixed input:checked + label {
+header.headerFixed input:checked + label {
 	background: var(--pink);
 }
-.headerFixed input:checked + label:after {
+header.headerFixed input:checked + label:after {
 	left: calc(100% - 5px);
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
@@ -165,13 +165,13 @@ header.headerFixed {
 	transform: translateX(-100%);
 }
 @media (max-width: 960px) {
-	.headerFixed {
+	header.headerFixed {
 		padding: 1.8rem 3rem;
 	}
-	.headerFixed .menu {
+	header.headerFixed .menu {
 		display: block;
 	}
-	.headerFixed nav {
+	header.headerFixed nav {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 		overflow: hidden;
@@ -189,10 +189,10 @@ header.headerFixed {
 		transition: opacity 0.25s;
 		background-color: var(--green);
 	}
-	.headerFixed nav a.button {
+	header.headerFixed nav a.button {
 		background-color: var(--pink);
 	}
-	.headerFixed nav.active {
+	header.headerFixed nav.active {
 		opacity: 1;
 		visibility: visible;
 	}

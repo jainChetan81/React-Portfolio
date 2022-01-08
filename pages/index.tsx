@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { About, Hero, Layout, Particle } from "../components";
+import { About, Contact, Hero, Layout, Particle, Projects } from "../components";
 import { NetworkDetector } from "../hoc";
 
 const Home: NextPage = () => {
@@ -8,6 +8,8 @@ const Home: NextPage = () => {
 			<Particle />
 			<Hero />
 			<About />
+			<Projects />
+			<Contact />
 		</Layout>
 	);
 };
