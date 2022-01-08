@@ -8,7 +8,7 @@ footer.footer {
 }
 footer.footer .logo {
 	font-size: 2.8rem;
-	color: var(--black);
+	color: #fff;
 }
 footer.footer .logo::first-letter {
 	color: var(--green);
@@ -53,6 +53,7 @@ footer.footer .social_media span {
 @media (max-width: 600px) {
 	footer.footer {
 		padding: 4rem 1rem;
+		padding-bottom: 6rem;
 	}
 	footer.footer p {
 		font-size: 1.2rem;

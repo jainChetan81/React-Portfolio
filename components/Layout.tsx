@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { FC } from "react";
-import { Footer, Header } from ".";
+import type { FC } from "react";
+import { Footer, Sidebar } from ".";
 import type { LayoutType } from "../@types";
 
 const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
@@ -16,7 +16,7 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="manifest.json" />
 			</Head>
-			<Header />
+			<Sidebar />
 			<main>{children}</main>
 			<Footer />
 		</>

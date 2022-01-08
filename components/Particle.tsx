@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 import Particles from "react-tsparticles";
 const Particle: FC = () => {
 	return (

@@ -1,0 +1,153 @@
+.navbar {
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width 600ms ease;
+	overflow: scroll;
+	overflow: hidden;
+	z-index: 10;
+	font-size: 2rem;
+}
+
+.navbar_nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.nav_item {
+	width: 100%;
+}
+
+.nav_item:last-child {
+	margin-top: auto;
+}
+
+.nav_link {
+	display: flex;
+	align-items: center;
+	height: auto;
+	color: var(--text-primary);
+	text-decoration: none;
+	padding-block: 3rem;
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
+	font-size: 2.1rem;
+	width: 100%;
+}
+
+.nav_link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary);
+}
+
+.link_text {
+	display: none;
+	margin-left: 1rem;
+}
+
+.nav_link svg {
+	width: 2rem;
+	min-width: 3rem;
+	margin: 0 1.5rem;
+}
+
+.logo {
+	margin-bottom: 1rem;
+	background: var(--bg-secondary);
+	width: 100%;
+	font-size: 3rem;
+	color: #fff;
+}
+
+.logo svg {
+	transform: rotate(0deg);
+	transition: var(--transition-speed);
+}
+
+.logo_text {
+	display: inline;
+	position: absolute;
+	left: -999px;
+	transition: var(--transition-speed);
+	font-size: 3rem;
+}
+.logo_text::first-letter {
+	color: var(--green);
+}
+
+.navbar:hover .logo svg {
+	transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.navbar_nav {
+		flex-direction: row;
+	}
+
+	.nav_link {
+		justify-content: center;
+	}
+	button.nav_link {
+		padding-top: 1rem;
+	}
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	.navbar {
+		top: 0;
+		width: 7rem;
+		height: 100vh;
+	}
+
+	.navbar:hover {
+		width: 24rem;
+	}
+
+	.navbar:hover .link_text {
+		display: inline;
+	}
+
+	.navbar:hover .logo svg {
+		margin-left: 18rem;
+	}
+
+	.navbar:hover .logo_text {
+		left: 0px;
+	}
+}
+
+.light {
+	--text-primary: #1f1f1f;
+	--text-secondary: #000000;
+	--bg-primary: #ffffff;
+	--bg-secondary: #e4e4e4;
+}
+
+#darkIcon {
+	display: block;
+}
+
+#lightIcon {
+	display: block;
+}
+
+#solarIcon {
+	display: block;
+}

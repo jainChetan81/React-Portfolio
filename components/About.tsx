@@ -1,7 +1,7 @@
 import styles from "../styles/About.module.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/image";
-import { FC } from "react";
+import type { FC } from "react";
 
 const About: FC = () => {
 	return (

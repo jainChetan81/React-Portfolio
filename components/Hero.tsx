@@ -2,7 +2,7 @@ import styles from "../styles/Hero.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
-import { FC } from "react";
+import type { FC } from "react";
 const Hero: FC = () => {
 	return (
 		<section className={styles.hero} id="home">
