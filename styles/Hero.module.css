@@ -1,0 +1,59 @@
+section.hero {
+	padding-block: 15%;
+	display: flex;
+	justify-content: space-between;
+	gap: 8rem;
+	background: rgba(0, 0, 0, 0);
+}
+section.hero .hero_text > p {
+	font-size: 1.8rem;
+}
+section.hero .hero_text h1 {
+	font-size: 7rem;
+}
+section.hero .hero_text h3 {
+	color: var(--green);
+	margin: 1rem 0;
+}
+section.hero .hero_text p.small_resume {
+	margin-bottom: 5rem;
+}
+section.hero .button {
+	margin-top: 5rem;
+	padding: 1.4rem 6rem;
+	border: none;
+	cursor: pointer;
+	background-color: var(--green);
+	color: #fff f;
+	border-radius: 2rem;
+	font-weight: 500;
+	transition: filter 0.25s;
+}
+section.hero .button:hover {
+	filter: brightness(0.8);
+}
+section.hero .hero_image img {
+	max-width: 500px;
+}
+@media (max-width: 960px) {
+	section.hero {
+		display: block;
+		margin-top: 15%;
+	}
+	section.hero .hero_text h1 {
+		font-size: 5rem;
+	}
+	section.hero .hero_image {
+		display: none;
+	}
+}
+@media (max-width: 600px) {
+	section.hero {
+		margin-top: 25%;
+	}
+}
+@media (max-width: 480px) {
+	section.hero {
+		margin-top: 35%;
+	}
+}
