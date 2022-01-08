@@ -1,14 +1,14 @@
 section.about {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
+	gap: 20px;
 }
 section.about .hard_skills {
-	margin-block: 1.6rem;
+	margin-block: 16px;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 1.8rem;
+	gap: 18px;
 }
 section.about .hard_ability {
 	display: flex;
@@ -16,28 +16,28 @@ section.about .hard_ability {
 	align-items: center;
 }
 section.about .hard_ability img {
-	width: 3.4rem;
+	width: 34px;
 }
 section.about h2 {
 	display: inline-block;
-	margin-bottom: 2rem;
-	border-bottom: 0.2rem solid var(--blue);
-	font-size: 3rem;
+	margin-bottom: 20px;
+	border-bottom: 2px solid var(--blue);
+	font-size: 30px;
 }
 section.about h3 {
-	margin-top: 2rem;
+	margin-top: 20px;
 	color: var(--green);
 }
 section.about p {
-	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
+	font-size: 18px;
+	letter-spacing: 1px;
 	font-weight: 500;
 }
 section.about .about_image {
 	text-align: center;
 }
 section.about .about_image img {
-	margin-top: 2rem;
+	margin-top: 20px;
 	width: 100%;
 	filter: grayscale(1);
 	transition: filter 0.5s;
@@ -48,7 +48,7 @@ section.about .about_image img:hover {
 @media only screen and (max-width: 480px) {
 	section.about .about_image {
 		max-width: 100%;
-		margin-top: 4rem;
+		margin-top: 40px;
 	}
 }
 @media (max-width: 960px) {

@@ -7,9 +7,7 @@ const Hero: FC = () => {
 	return (
 		<section className={styles.hero} id="home">
 			<div className={styles.hero_text}>
-				<ScrollAnimation animateIn="fadeInUp">
-					<p>Hello 👋, I am</p>
-				</ScrollAnimation>
+				<p>Hello 👋, I am</p>
 				<ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
 					<h1>Chetan Jain</h1>
 				</ScrollAnimation>

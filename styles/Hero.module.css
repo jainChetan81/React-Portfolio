@@ -5,10 +5,10 @@ section.hero {
 	background: rgba(0, 0, 0, 0);
 }
 section.hero .hero_text > p {
-	font-size: 1.8rem;
+	font-size: 1rem;
 }
 section.hero .hero_text h1 {
-	font-size: 7rem;
+	font-size: 70px;
 }
 section.hero .hero_text h3 {
 	color: var(--green);

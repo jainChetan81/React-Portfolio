@@ -1,7 +1,41 @@
-import styles from "../styles/Projects.module.css";
+import styles from "../../styles/Projects.module.css";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import type { FC } from "react";
+import Card from "./Card";
+type Project = {
+	name: string;
+	description: string;
+};
+const projects: Project[] = [
+	{
+		name: "FCallendar",
+		description:
+			"A web application made during the FCamara training program Hackathon . This application is to help with the return from remote work to face-to-face work.",
+	},
+	{
+		name: "Github Searcher",
+		description:
+			"A nicer version to view your GitHub profile, includes data visualization, repositories, sharing and more.",
+	},
+	{
+		name: "sunnyside agency",
+		description: "A landing page of a fictional company proposed by Frontend Mentor.",
+	},
+	{
+		name: "Portfolio V1",
+		description: "An alternate version of my portfolio, using VueJs",
+	},
+	{
+		name: "Dtmoney",
+		description:
+			"A finance manager to analyze your earnings, expenses and have greater control over your finances.",
+	},
+	{
+		name: "Music Library",
+		description: "An interface for a music library, similar to Spotify.",
+	},
+];
 
 const Projects: FC = () => {
 	return (
@@ -9,7 +43,12 @@ const Projects: FC = () => {
 			<h2 className="capitalize">my projects</h2>
 
 			<div className={styles.projects_container}>
-				<ScrollAnimation animateIn="flipInX">
+				{projects.map(({ name, description }: Project, i: number) => (
+					<ScrollAnimation animateIn="flipInX" key={i}>
+						<Card index={i} name={name} description={description} />
+					</ScrollAnimation>
+				))}
+				{/* <ScrollAnimation animateIn="flipInX">
 					<div className={styles.project}>
 						<header>
 							<svg
@@ -37,7 +76,7 @@ const Projects: FC = () => {
 							</div>
 						</header>
 						<div className="body">
-							<h3>FCallendar</h3>
+							<h3></h3>
 							<p>
 								Uma aplicação Web realizada durante o Hackathon do programa de formação da{" "}
 								<a href="https://www.fcamara.com.br/"> FCamara</a>. Esta aplicação serve para ajudar na
@@ -157,154 +196,7 @@ const Projects: FC = () => {
 							</ul>
 						</footer>
 					</div>
-				</ScrollAnimation>
-
-				<ScrollAnimation animateIn="flipInX">
-					<div className={styles.project}>
-						<header>
-							<svg
-								width="50"
-								xmlns="http://www.w3.org/2000/svg"
-								role="img"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#23ce6b "
-								strokeWidth="1"
-								strokeLinecap="round"
-								strokeLinejoin="round">
-								<title>Folder</title>
-								<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-							</svg>
-							<div className={styles.project_links}>
-								<a
-									href="https://joaotulio.vercel.app/"
-									className="-mt-1"
-									target="_blank"
-									rel="noreferrer">
-									<Image
-										src="https://ik.imagekit.io/clhowstalgz/icons/external-link-icon.svg"
-										alt="Visitor site"
-										height={26}
-										width={26}
-									/>
-								</a>
-							</div>
-						</header>
-						<div className="body">
-							<h3>Portfólio V1</h3>
-							<p>Uma versão alternativa de meu portfólio, utilizando VueJs.</p>
-						</div>
-						<footer>
-							<ul className={styles.tech_list}>
-								<li>VueJs</li>
-								<li>JavaScript</li>
-							</ul>
-						</footer>
-					</div>
-				</ScrollAnimation>
-
-				<ScrollAnimation animateIn="flipInX">
-					<div className={styles.project}>
-						<header>
-							<svg
-								width="50"
-								xmlns="http://www.w3.org/2000/svg"
-								role="img"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#23ce6b "
-								strokeWidth="1"
-								strokeLinecap="round"
-								strokeLinejoin="round">
-								<title>Folder</title>
-								<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-							</svg>
-							<div className={styles.project_links}>
-								<a
-									href="https://github.com/joaotuliojt/dtmoney-trilha-reactjs"
-									target="_blank"
-									className="-mt-1"
-									rel="noreferrer">
-									<Image
-										src="https://ik.imagekit.io/clhowstalgz/icons/github-icon.svg"
-										alt="Visitor site"
-										height={26}
-										width={26}
-									/>
-								</a>
-							</div>
-						</header>
-						<div className="body">
-							<h3>Dtmoney</h3>
-							<p>
-								Um gerenciador de finanças para analisar seus ganhos, gastos e ter um controle maior de
-								suas finanças.
-							</p>
-						</div>
-						<footer>
-							<ul className={styles.tech_list}>
-								<li>VueJs</li>
-								<li>JavaScript</li>
-							</ul>
-						</footer>
-					</div>
-				</ScrollAnimation>
-
-				<ScrollAnimation animateIn="flipInX">
-					<div className={styles.project}>
-						<header>
-							<svg
-								width="50"
-								xmlns="http://www.w3.org/2000/svg"
-								role="img"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#23ce6b "
-								strokeWidth="1"
-								strokeLinecap="round"
-								strokeLinejoin="round">
-								<title>Folder</title>
-								<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-							</svg>
-							<div className={styles.project_links}>
-								<a
-									href="https://github.com/joaotuliojt/dv-musica-library-page"
-									target="_blank"
-									rel="noreferrer">
-									<Image
-										src="https://ik.imagekit.io/clhowstalgz/icons/github-icon.svg"
-										alt="Github site"
-										height={26}
-										width={26}
-									/>
-								</a>
-								<a
-									href="https://joaotuliojt.github.io/dv-musica-library-page/"
-									target="_blank"
-									className="-mt-1"
-									rel="noreferrer">
-									<Image
-										src="https://ik.imagekit.io/clhowstalgz/icons/external-link-icon.svg"
-										alt="Visitor site"
-										height={26}
-										width={26}
-									/>
-								</a>
-							</div>
-						</header>
-						<div className="body">
-							<h3>Music Library</h3>
-							<p>Uma interface para uma biblioteca de músicas, semelhante ao Spotify.</p>
-						</div>
-						<footer>
-							<ul className={styles.tech_list}>
-								<li>Html</li>
-								<li>Css</li>
-								<li>JavaScript</li>
-							</ul>
-						</footer>
-					</div>
-				</ScrollAnimation>
+				</ScrollAnimation> */}
 			</div>
 		</section>
 	);

@@ -3,7 +3,7 @@ section.contact header {
 }
 section.contact header h2 {
 	text-align: center;
-	font-size: 4rem;
+	font-size: 40px;
 }
 section.contact header p {
 	color: var(--green);
@@ -13,24 +13,24 @@ section.contact .contacts {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 20px;
 	place-items: center;
-	margin-top: 8rem;
+	margin-top: 80px;
 }
 section.contact .contacts .contact_info {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 50%;
-	max-width: 40rem;
-	gap: 2rem;
+	max-width: 400px;
+	gap: 20px;
 	background-color: var(--green);
-	border-radius: 1.4rem;
-	padding: 1.6rem 2.8rem;
+	border-radius: 14px;
+	padding: 16px 28px;
 	transition: background-color 0.25s;
 }
 section.contact .contacts .contact_info img {
-	width: 4rem;
+	width: 40px;
 }
 section.contact .contacts .contact_info a {
 	color: var(--black);
@@ -44,27 +44,27 @@ section.contact .contacts .contact_info:hover a {
 }
 
 section.contact .form {
-	margin-top: 10rem;
+	margin-top: 100px;
 	display: grid;
 	place-items: center;
 }
 section.contact .form h2 {
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 20px;
 }
 section.contact .form form {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	align-items: center;
-	gap: 1rem;
+	gap: 10px;
 	width: 100%;
 }
 section.contact .form form input,
 section.contact .form form textarea {
-	width: 60rem;
-	padding: 1rem 2rem;
-	border-radius: 1.6rem;
+	width: 600px;
+	padding: 10px 20px;
+	border-radius: 16px;
 	outline: none;
 	border: none;
 	background: none;
@@ -77,17 +77,17 @@ section.contact .form form textarea::placeholder {
 	color: #fff;
 }
 section.contact .form form textarea {
-	height: 20rem;
+	height: 200px;
 	overflow-y: auto;
 }
 section.contact .form form button {
-	padding: 1rem 6rem;
+	padding: 10px 60px;
 	text-transform: uppercase;
 	border: none;
 	cursor: pointer;
 	background-color: var(--green);
 	color: #fff f;
-	border-radius: 2rem;
+	border-radius: 20px;
 	font-weight: 500;
 	transition: filter 0.25s;
 }

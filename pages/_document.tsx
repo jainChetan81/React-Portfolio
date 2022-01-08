@@ -27,11 +27,11 @@ class MyDocument extends Document {
 					<meta name="apple-mobile-web-app-title" content="Portfolio - Chetan Jain" />
 					<link
 						rel="apple-touch-icon"
-						href="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-192,f-png,r-100"
+						href="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-200,f-png,r-100"
 					/>
 					<link
 						rel="shortcut icon"
-						href="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-192,f-png,r-100"
+						href="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-200,f-png,r-100"
 					/>
 					<meta name="twitter:card" content="summary" />
 					<meta name="twitter:url" content="https://thechetanjain.in" />
@@ -42,7 +42,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name="twitter:image"
-						content="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-192,f-png,r-100"
+						content="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-200,f-png,r-100"
 					/>
 					<meta name="twitter:creator" content="@jainChetan81" />
 					<meta property="og:type" content="website" />
@@ -55,7 +55,7 @@ class MyDocument extends Document {
 					<meta property="og:url" content="https://thechetanjain.in" />
 					<meta
 						property="og:image"
-						content="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-192,f-png,r-100"
+						content="https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-200,h-200,f-png,r-100"
 					/>
 				</Head>
 				<body>
