@@ -14,7 +14,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 		<nav className={styles.navbar}>
 			<ul className={styles.navbar_nav}>
 				<li className={styles.logo}>
-					<Link href="/#home">
+					<Link href="/">
 						<a className={styles.nav_link}>
 							<span className={styles.link_text + " " + styles.logo_text}>JChetan</span>
 							<svg
@@ -44,7 +44,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.nav_item}>
 					<Link href="/#home">
 						<a className={styles.nav_link}>
-							<FaHome className="w-10 h-12" />
+							<FaHome className="w-12 h-14" />
 							<span className={styles.link_text}>Home</span>
 						</a>
 					</Link>
@@ -53,7 +53,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.nav_item}>
 					<Link href="/#about">
 						<a className={styles.nav_link}>
-							<FaUserAlt className="w-8 h-6" />
+							<FaUserAlt className="w-10 h-6" />
 							<span className={styles.link_text}>About</span>
 						</a>
 					</Link>
@@ -62,7 +62,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.nav_item}>
 					<Link href="/#projects">
 						<a className={styles.nav_link}>
-							<FaFolder className="w-10 h-12" />
+							<FaFolder className="w-8 h-12" />
 							<span className={styles.link_text}>Projects</span>
 						</a>
 					</Link>
@@ -71,7 +71,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.nav_item}>
 					<Link href="/#contact">
 						<a className={styles.nav_link}>
-							<FaMobile className="w-10 h-6" />
+							<FaMobile className="w-12 h-7" />
 							<span className={styles.link_text}>Contact</span>
 						</a>
 					</Link>
@@ -79,7 +79,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.nav_item}>
 					<Link href="/api/resume">
 						<a className={styles.nav_link}>
-							<FaFile className="w-10 h-6" />
+							<FaFile className="w-10 h-7" />
 							<span className={styles.link_text}>Download CV</span>
 						</a>
 					</Link>

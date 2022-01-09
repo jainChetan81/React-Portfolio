@@ -80,11 +80,17 @@ section.projects .projects_container .project footer .tech_list {
 	cursor: pointer;
 	border: 0;
 	background-color: var(--clr-secondary);
+	opacity: 0.8;
 	border-radius: 100vw;
 	color: var(--clr-light);
 	padding: 0.5em 1.5em;
 	font-weight: bold;
 	font-size: 1.2rem;
+	transition: all ease-in-out 0.2s;
+}
+.btn:hover {
+	opacity: 1;
+	transform: scale(1.1, 1.2);
 }
 .card {
 	position: relative;
@@ -133,8 +139,12 @@ section.projects .projects_container .project footer .tech_list {
 	justify-content: space-evenly;
 	margin-top: 1rem;
 }
+.front .links a svg {
+	transition: all ease-in-out 0.2s;
+}
 .front .links a:hover svg {
 	color: #df49a6;
+	transform: scale(1.2);
 }
 .front .viewers {
 	font-size: 1rem;
