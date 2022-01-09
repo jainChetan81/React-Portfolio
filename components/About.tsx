@@ -41,7 +41,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/react-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=w-34,h-34`}
 								alt="React"
 								height={34}
 								width={34}
@@ -52,7 +52,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/vue-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vue-icon.svg?tr=w-34,h-34`}
 								alt="Vue"
 								height={34}
 								width={34}
@@ -63,7 +63,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.3 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/js-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/js-icon.svg?tr=w-34,h-34`}
 								alt="JavaScript"
 								height={34}
 								width={34}
@@ -74,7 +74,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/html-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/html-icon.svg?tr=w-34,h-34`}
 								alt="Html"
 								height={34}
 								width={34}
@@ -85,7 +85,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.5 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/css-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg?tr=w-34,h-34`}
 								alt="Css"
 								height={34}
 								width={34}
@@ -95,7 +95,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/node-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/node-icon.svg?tr=w-34,h-34`}
 								alt="Node"
 								height={34}
 								width={34}
@@ -106,7 +106,7 @@ const About: FC = () => {
 					<div className={styles.hard_ability}>
 						<ScrollAnimation animateIn="fadeInUp" delay={0.7 * 1000}>
 							<Image
-								src={`https://ik.imagekit.io/clhowstalgz/icons/typescript-icon.svg?tr=f-png`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg?tr=w-34,h-34`}
 								alt="Typescript"
 								height={34}
 								width={34}
@@ -118,7 +118,7 @@ const About: FC = () => {
 			<div className={styles.about_image}>
 				<ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
 					<Image
-						src={`https://ik.imagekit.io/clhowstalgz/chetan2.jpg?tr=h-600,w-500`}
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan2.jpg?tr=h-600,w-500`}
 						alt="Chetan Jain Profile"
 						height={600}
 						width={500}

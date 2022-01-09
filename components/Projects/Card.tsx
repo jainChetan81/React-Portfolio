@@ -16,7 +16,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 			<div className={styles.front}>
 				<Image
 					className={styles.thumbnail}
-					src="https://ik.imagekit.io/clhowstalgz/games/skyrim.jpg?tr=w-250,h-300"
+					src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/games/skyrim.jpg?tr=w-250,h-300`}
 					height={300}
 					width={250}
 					alt="game"
@@ -36,7 +36,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<p className={styles.viewers}>539.9k</p>
 					<div className={styles.streamers}>
 						<Image
-							src="https://ik.imagekit.io/clhowstalgz/chetan"
+							src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan?tr=w-40,h-40`}
 							width={40}
 							height={40}
 							alt="Contributor"
@@ -53,7 +53,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
 							<Image
-								src="https://ik.imagekit.io/clhowstalgz/icons/react-icon.svg"
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.?tr=w-40,h-40`}
 								width={30}
 								height={30}
 								alt="a"
@@ -64,7 +64,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
 							<Image
-								src="https://ik.imagekit.io/clhowstalgz/icons/typescript-icon.svg"
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.?tr=w-40,h-40`}
 								width={30}
 								height={30}
 								alt="a"
@@ -75,7 +75,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
 							<Image
-								src="https://ik.imagekit.io/clhowstalgz/icons/css-icon.svg?tr=w-30,h-30"
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
 								alt="a"

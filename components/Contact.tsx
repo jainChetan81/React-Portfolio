@@ -34,7 +34,7 @@ const Contact: FC = () => {
 			<div className={styles.contacts}>
 				<div className={styles.contact_info}>
 					<Image
-						src="https://ik.imagekit.io/clhowstalgz/icons/email-icon.svg"
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/email-icon.svg?tr=w-40,h-40`}
 						alt="Email"
 						width={40}
 						height={40}
@@ -43,7 +43,7 @@ const Contact: FC = () => {
 				</div>
 				<div className={styles.contact_info}>
 					<Image
-						src="https://ik.imagekit.io/clhowstalgz/icons/phone-icon.svg"
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/phone-icon.svg?tr=w-40,h-40`}
 						alt="Phone"
 						width={40}
 						height={40}

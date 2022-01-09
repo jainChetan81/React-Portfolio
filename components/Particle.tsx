@@ -132,57 +132,57 @@ const Particle: FC = () => {
 						},
 						image: [
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/bootstrap-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/bootstrap-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/css-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/html-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/html-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/js-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/js-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/mysql-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/mysql-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/node-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/node-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/react-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/sass-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/sass-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/typescript-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/vscode-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vscode-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: "https://ik.imagekit.io/clhowstalgz/icons/vue-icon.svg",
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vue-icon.svg??tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},

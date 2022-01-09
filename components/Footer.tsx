@@ -17,7 +17,7 @@ const Footer: FC = () => {
 				<p>
 					This site was made with{" "}
 					<Image
-						src="https://ik.imagekit.io/clhowstalgz/icons/react-icon.svg?tr=f-png"
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=f-png,h-35,w-35`}
 						alt="react icon"
 						width={35}
 						height={35}

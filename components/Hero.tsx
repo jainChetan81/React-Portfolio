@@ -29,7 +29,7 @@ const Hero: FC = () => {
 			<div className={styles.hero_image}>
 				<ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
 					<Image
-						src="https://ik.imagekit.io/clhowstalgz/icons/illustration.svg"
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/illustration.svg`}
 						width={500}
 						height={450}
 						alt="Chetan Jain"
