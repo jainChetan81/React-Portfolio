@@ -125,10 +125,10 @@ const Particle: FC = () => {
 					shape: {
 						character: {
 							fill: false,
-							font: "Verdana",
+							font: "Red Hat Display",
 							style: "",
 							value: "*",
-							weight: "400",
+							weight: "500",
 						},
 						image: [
 							{
