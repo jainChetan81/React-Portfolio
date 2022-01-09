@@ -97,6 +97,7 @@ section.projects .projects_container .project footer .tech_list {
 	cursor: pointer;
 	font-size: 2rem;
 	z-index: 100;
+	max-width: 250px;
 }
 .rank {
 	font-weight: bold;
@@ -133,6 +134,7 @@ section.projects .projects_container .project footer .tech_list {
 .front .name {
 	margin: 0.75em 0;
 	font-size: 1.8rem;
+	word-break: break-word;
 }
 .front .links {
 	display: none;
