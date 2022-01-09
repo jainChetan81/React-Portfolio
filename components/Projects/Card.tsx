@@ -47,17 +47,6 @@ const Card: FC<Props> = ({ rank, name, slug, startDate, endDate, summary, github
 						</a>
 					)}
 				</p>
-				<div className={styles.stats}>
-					<p className={styles.viewers}>{monthDiff(startDate, endDate)} months</p>
-					<div className={styles.streamers}>
-						<Image
-							src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan?tr=w-40,h-40`}
-							width={40}
-							height={40}
-							alt="Contributor"
-						/>
-					</div>
-				</div>
 			</div>
 			<div className={styles.back}>
 				<div className={styles.streaming_info}>

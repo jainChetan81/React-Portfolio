@@ -115,11 +115,6 @@ section.projects .projects_container .project footer .tech_list {
 	display: flex;
 	text-align: center;
 }
-.streamers img {
-	width: 2em;
-	height: 2em;
-	border-radius: 50%;
-}
 .streamers .icon img {
 	border-radius: 0;
 }
@@ -150,21 +145,12 @@ section.projects .projects_container .project footer .tech_list {
 	color: #df49a6;
 	transform: scale(1.2);
 }
-.front .viewers {
-	font-size: 1.2rem;
-	font-weight: 800;
-}
-.front .stats {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 .back {
 	opacity: 0;
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 49%;
+	top: 57%;
 
 	display: flex;
 	flex-direction: column;
@@ -196,7 +182,7 @@ section.projects .projects_container .project footer .tech_list {
 	transform: scale(0.2 0.9);
 	border-radius: var(--br);
 	opacity: 0;
-	min-height: 350px;
+	height: 390px;
 }
 .card:hover .rank {
 	transform: translate(120%, -17%);
@@ -212,9 +198,6 @@ section.projects .projects_container .project footer .tech_list {
 	display: flex;
 	columns: 2;
 	column-gap: 10px;
-}
-.card:hover .stats {
-	opacity: 0;
 }
 .card:hover .back {
 	opacity: 1;
