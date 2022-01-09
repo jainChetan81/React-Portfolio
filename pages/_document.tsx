@@ -23,7 +23,7 @@ class MyDocument extends Document {
 						rel="apple-touch-icon"
 						href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100"
 					/>
-					<link rel="shortcut icon" href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100" />
+					<link rel="shortcut icon" href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
 					<meta name="twitter:card" content="summary" />
 					<meta name="twitter:url" content="https://thechetanjain.in" />
 					<meta name="twitter:title" content="Portfolio - Chetan Jain" />
@@ -31,10 +31,7 @@ class MyDocument extends Document {
 						name="twitter:description"
 						content="A Portfolio of Chetan Jain to showcase various skills and projects"
 					/>
-					<meta
-						name="twitter:image"
-						content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100"
-					/>
+					<meta name="twitter:image" content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
 					<meta name="twitter:creator" content="@jainChetan81" />
 					<meta property="og:type" content="website" />
 					<meta property="og:title" content="Portfolio - Chetan Jain" />
@@ -44,10 +41,7 @@ class MyDocument extends Document {
 					/>
 					<meta property="og:site_name" content="Portfolio - Chetan Jain" />
 					<meta property="og:url" content="https://thechetanjain.in" />
-					<meta
-						property="og:image"
-						content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100"
-					/>
+					<meta property="og:image" content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
 				</Head>
 				<body>
 					<Main />
