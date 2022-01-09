@@ -53,7 +53,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
 							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.?tr=w-40,h-40`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
 								alt="a"
@@ -64,7 +64,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
 							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.?tr=w-40,h-40`}
+								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
 								alt="a"
