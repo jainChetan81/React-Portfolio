@@ -3,13 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/Projects.module.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { Project } from "../../@types";
+import { StrapiImage } from "../../@types";
 type Props = {
-	project: Project;
+	rank: number;
+	name: string;
+	slug: string;
+	startDate: string;
+	endDate: string;
+	summary: string;
+	githubUrl: string;
+	displayImage: StrapiImage;
+	externalUrl: string;
 };
-const Card: FC<Props> = ({
-	project: { rank, name, slug, startDate, endDate, summary, githubUrl, displayImage, externalUrl },
-}) => {
+const Card: FC<Props> = ({ rank, name, slug, startDate, endDate, summary, githubUrl, displayImage, externalUrl }) => {
 	function monthDiff(d1: string, d2: string) {
 		const start: Date = new Date(d1);
 		const end: Date = new Date(d2);
@@ -25,9 +31,9 @@ const Card: FC<Props> = ({
 			<div className={styles.front}>
 				<Image
 					className={styles.thumbnail}
-					src={`${displayImage.url}?tr=w-100,h-200`}
-					height={200}
-					width={100}
+					src={`${displayImage?.url || "https://ik.imagekit.io/clhowstalgz/games/skyrim.jpg"}?tr=w-250,h-300`}
+					height={300}
+					width={250}
 					alt="game"
 				/>
 				<h2 className={styles.name}>{name}</h2>

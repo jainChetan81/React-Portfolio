@@ -1,3 +1,15 @@
+export type StrapiImage = {
+	name: string;
+	url: string;
+	formats: {
+		small: {
+			url: string;
+		};
+		thumbnail: {
+			url: string;
+		};
+	};
+};
 export type Project = {
 	name: string;
 	slug: string;
@@ -9,18 +21,7 @@ export type Project = {
 	summary: string;
 	technologies: string[];
 	description: string;
-	displayImage: {
-		name: string;
-		url: string;
-		formats: {
-			small: {
-				url: string;
-			};
-			thumbnail: {
-				url: string;
-			};
-		};
-	};
+	displayImage: StrapiImage;
 	sliderImages: {
 		name: string;
 		url: string;

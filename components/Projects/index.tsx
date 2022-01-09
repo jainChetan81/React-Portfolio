@@ -12,7 +12,17 @@ const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 			<div className={styles.projects_container}>
 				{projects.map((project: Project) => (
 					<ScrollAnimation animateIn="flipInX" key={project.rank}>
-						<Card project={project} />
+						<Card
+							rank={project.rank}
+							name={project.name}
+							slug={project.slug}
+							startDate={project.startDate}
+							endDate={project.endDate}
+							summary={project.summary}
+							githubUrl={project.githubUrl}
+							displayImage={project.displayImage}
+							externalUrl={project.externalUrl}
+						/>
 					</ScrollAnimation>
 				))}
 			</div>
