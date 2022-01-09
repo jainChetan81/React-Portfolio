@@ -2,8 +2,12 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import { FC, LegacyRef, useEffect, useRef, useState } from "react";
 import { Footer, Sidebar } from ".";
-import type { LayoutType } from "../@types";
-
+type LayoutType = {
+	title: string;
+	keywords?: string;
+	description?: string;
+	children?: any;
+};
 const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 	const bodyRef: LegacyRef<HTMLBodyElement> = useRef(null);
 	const [isDark, setIsDark] = useState<boolean>(true);
@@ -36,7 +40,7 @@ Layout.defaultProps = {
 	keywords: "[NextJs, Tailwind, Typescript]",
 };
 Layout.propTypes = {
-	title: PropTypes.string,
+	title: PropTypes.string.isRequired,
 	description: PropTypes.string,
 	keywords: PropTypes.string,
 };

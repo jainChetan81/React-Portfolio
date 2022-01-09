@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 const withPWA = require("next-pwa");
 
+// @ts-ignore
 module.exports = withPWA({
 	pwa: {
 		dest: "public",
@@ -11,7 +12,7 @@ module.exports = withPWA({
 	},
 	reactStrictMode: true,
 	images: {
-		domains: ["res.imagekit.io", "doodleipsum.com", "ik.imagekit.io"],
+		domains: ["res.imagekit.io", "doodleipsum.com", "res.cloudinary.com", "ik.imagekit.io"],
 		minimumCacheTTL: 3600,
 		disableStaticImages: true,
 	},

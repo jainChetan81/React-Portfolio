@@ -1,24 +1,33 @@
 import { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/Projects.module.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { Project } from "../../@types";
 type Props = {
-	index: number;
-	name: string;
-	description: string;
-	externalUrl?: string;
-	githubUrl: string;
+	project: Project;
 };
-const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) => {
+const Card: FC<Props> = ({
+	project: { rank, name, slug, startDate, endDate, summary, githubUrl, displayImage, externalUrl },
+}) => {
+	function monthDiff(d1: string, d2: string) {
+		const start: Date = new Date(d1);
+		const end: Date = new Date(d2);
+		var months;
+		months = (end.getFullYear() - start.getFullYear()) * 12;
+		months -= start.getMonth();
+		months += end.getMonth();
+		return months <= 0 ? 0 : months;
+	}
 	return (
 		<article className={styles.card}>
-			<span className={styles.rank}>{index + 1}</span>
+			<span className={styles.rank}>{rank}</span>
 			<div className={styles.front}>
 				<Image
 					className={styles.thumbnail}
-					src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/games/skyrim.jpg?tr=w-250,h-300`}
-					height={300}
-					width={250}
+					src={`${displayImage.url}?tr=w-100,h-200`}
+					height={200}
+					width={100}
 					alt="game"
 				/>
 				<h2 className={styles.name}>{name}</h2>
@@ -33,7 +42,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 					)}
 				</p>
 				<div className={styles.stats}>
-					<p className={styles.viewers}>539.9k</p>
+					<p className={styles.viewers}>{monthDiff(startDate, endDate)} months</p>
 					<div className={styles.streamers}>
 						<Image
 							src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan?tr=w-40,h-40`}
@@ -46,9 +55,11 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 			</div>
 			<div className={styles.back}>
 				<div className={styles.streaming_info}>
-					<p className={styles.game_stat}>{description}</p>
+					<p className={styles.game_stat}>{summary}</p>
 				</div>
-				<button className={styles.btn}>Read More</button>
+				<Link href={`/projects/${slug}`}>
+					<a className={styles.btn}>Read More</a>
+				</Link>
 				<div className={styles.streamers}>
 					<div className={styles.streamer}>
 						<div className={styles.icon}>
@@ -56,7 +67,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
-								alt="a"
+								alt="react icon"
 							/>
 						</div>
 						<p className={styles.name}>React</p>
@@ -67,7 +78,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
-								alt="a"
+								alt="typescript icon"
 							/>
 						</div>
 						<p className={styles.name}>Typescript</p>
@@ -78,7 +89,7 @@ const Card: FC<Props> = ({ index, name, description, githubUrl, externalUrl }) =
 								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg?tr=w-30,h-30`}
 								width={30}
 								height={30}
-								alt="a"
+								alt="css icon"
 							/>
 						</div>
 						<p className={styles.name}>CSS</p>
