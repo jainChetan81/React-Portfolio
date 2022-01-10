@@ -14,6 +14,7 @@
 	--blue: #016fb9;
 	--clr-light: rgb(255, 255, 255);
 	--clr-secondary: rgb(0, 66, 199);
+	--font-color-link: #007deb;
 }
 
 body.body.dark {
@@ -40,7 +41,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background-color: var(--bg-main);
 	color: var(--text-secondary);
-	overflow-x: hidden;
 }
 .not-found {
 	height: calc(100vh - 150px);
@@ -65,10 +65,11 @@ body::-webkit-scrollbar-track {
 	background-color: #1e1e24;
 }
 body::-webkit-scrollbar-thumb {
-	background-color: rgb(25, 102, 25);
+	background-color: var(--font-color-link);
 }
 section {
 	margin-top: 100px;
+	min-height: calc(100vh - 250px);
 }
 main #tsparticles {
 	position: absolute;
@@ -82,6 +83,9 @@ main #tsparticles {
 	main {
 		margin: 0;
 		padding: 0 2rem;
+	}
+	.not-found {
+		height: calc(100vh - 288px);
 	}
 }
 @media (max-width: 360px) {
