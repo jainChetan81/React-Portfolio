@@ -143,7 +143,6 @@ export async function getStaticProps({ params: { slug } }: any) {
 	} catch (error) {
 		console.error(`error`, error);
 	}
-	console.log(`nextProject`, nextProject?.[0]);
 
 	return {
 		props: {

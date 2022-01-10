@@ -118,10 +118,10 @@ const About: FC = () => {
 			<div className={styles.about_image}>
 				<ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
 					<Image
-						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan2.jpg?tr=h-600,w-500`}
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/chetan2.jpg?tr=h-420,w-350`}
 						alt="Chetan Jain Profile"
-						height={600}
-						width={500}
+						height={420}
+						width={350}
 						className="rounded"
 					/>
 				</ScrollAnimation>
