@@ -9,10 +9,12 @@ import { Layout } from "../../components";
 import { NetworkDetector } from "../../hoc";
 
 type Props = {
+	previousProject: Project;
 	project: Project;
+	nextProject: Project;
 	notFound?: boolean;
 };
-const Project: FC<Props> = ({ project }) => {
+const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -64,31 +66,45 @@ const Project: FC<Props> = ({ project }) => {
 				<div className={styles.markdown}>
 					<ReactMarkdown>{project.description}</ReactMarkdown>
 				</div>
+				{project.sliderImages?.length && (
+					<div className={styles.image_container}>
+						{project.sliderImages?.map((image) => (
+							<figure key={image.name}>
+								<Image
+									src={`${image.url}?tr=h-600,w=1000`}
+									alt="first"
+									layout="fill"
+									objectFit="contain"
+								/>
+							</figure>
+						))}
+					</div>
+				)}
 
 				<div
 					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start px-8 mt-10`}>
-					<Link href="/a">
-						<a className="flex items-start cursor-pointer w-80 text-left justify-end float-left">
-							<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
-							<aside>
-								<h2 className="font-bold text-2xl uppercase">Previous</h2>
-								<p className="break-words opacity-40">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, nam!
-								</p>
-							</aside>
-						</a>
-					</Link>
-					<Link href="/a">
-						<a className="flex items-start cursor-pointer w-80 text-right justify-end float-right">
-							<aside>
-								<h2 className="font-bold text-2xl uppercase">NEXT</h2>
-								<p className=" opacity-40">
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, nam!
-								</p>
-							</aside>
-							<FaLongArrowAltRight className="w-32 h-20 ml-5" />
-						</a>
-					</Link>
+					{previousProject.slug && (
+						<Link href={`/projects/${previousProject.slug}`}>
+							<a className="flex items-start cursor-pointer w-80 text-left justify-end float-left">
+								<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
+								<aside>
+									<h2 className="font-bold text-2xl uppercase">Previous</h2>
+									<p className="break-words opacity-40">{previousProject.summary}</p>
+								</aside>
+							</a>
+						</Link>
+					)}
+					{nextProject.slug && (
+						<Link href={`/projects/${nextProject.slug}`}>
+							<a className="flex items-start cursor-pointer w-80 text-right justify-end float-right">
+								<aside>
+									<h2 className="font-bold text-2xl uppercase">NEXT</h2>
+									<p className=" opacity-40">{nextProject.summary}</p>
+								</aside>
+								<FaLongArrowAltRight className="w-32 h-20 ml-5" />
+							</a>
+						</Link>
+					)}
 				</div>
 			</section>
 		</Layout>
@@ -113,9 +129,27 @@ export async function getStaticProps({ params: { slug } }: any) {
 			notFound: true,
 		};
 	}
+	let previousProject;
+	let nextProject;
+	try {
+		const prevRes: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank - 1}`);
+		previousProject = prevRes ? await prevRes.json() : [];
+	} catch (error) {
+		console.error(`error`, error);
+	}
+	try {
+		const nextRes: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank + 1}`);
+		nextProject = nextRes ? await nextRes.json() : [];
+	} catch (error) {
+		console.error(`error`, error);
+	}
+	console.log(`nextProject`, nextProject?.[0]);
+
 	return {
 		props: {
+			previousProject: previousProject?.[0] || {},
 			project: project[0],
+			nextProject: nextProject?.[0] || {},
 		},
 		revalidate: 60,
 	};

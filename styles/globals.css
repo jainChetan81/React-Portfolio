@@ -6,6 +6,8 @@
 :root {
 	--transition-speed: 0.5s;
 	scroll-padding-top: 50px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--font-color-link) #1e1e24;
 	--transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
 	--br: 0.5em;
 	--pink: #e31f71;
@@ -41,6 +43,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background-color: var(--bg-main);
 	color: var(--text-secondary);
+	scrollbar-width: thin;
+	scrollbar-color: var(--font-color-link) #1e1e24;
 }
 .not-found {
 	height: calc(100vh - 150px);
