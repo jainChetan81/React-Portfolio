@@ -16,8 +16,6 @@ const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 							rank={project.rank}
 							name={project.name}
 							slug={project.slug}
-							startDate={project.startDate}
-							endDate={project.endDate}
 							summary={project.summary}
 							githubUrl={project.githubUrl}
 							displayImage={project.displayImage}

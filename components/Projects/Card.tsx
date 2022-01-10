@@ -8,23 +8,12 @@ type Props = {
 	rank: number;
 	name: string;
 	slug: string;
-	startDate: string;
-	endDate: string;
 	summary: string;
 	githubUrl: string;
 	displayImage: StrapiImage;
 	externalUrl: string;
 };
-const Card: FC<Props> = ({ rank, name, slug, startDate, endDate, summary, githubUrl, displayImage, externalUrl }) => {
-	function monthDiff(d1: string, d2: string) {
-		const start: Date = new Date(d1);
-		const end: Date = new Date(d2);
-		var months;
-		months = (end.getFullYear() - start.getFullYear()) * 12;
-		months -= start.getMonth();
-		months += end.getMonth();
-		return months <= 0 ? 0 : months;
-	}
+const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, externalUrl }) => {
 	return (
 		<article className={styles.card}>
 			<span className={styles.rank}>{rank}</span>

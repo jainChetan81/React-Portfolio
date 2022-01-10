@@ -23,7 +23,7 @@ class MyDocument extends Document {
 						rel="apple-touch-icon"
 						href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100"
 					/>
-					<link rel="shortcut icon" href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
+					<link rel="shortcut icon" href="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200,r-100" />
 					<meta name="twitter:card" content="summary" />
 					<meta name="twitter:url" content="https://thechetanjain.in" />
 					<meta name="twitter:title" content="Portfolio - Chetan Jain" />

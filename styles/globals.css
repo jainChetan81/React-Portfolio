@@ -42,6 +42,9 @@ body {
 	color: var(--text-secondary);
 	overflow-x: hidden;
 }
+.not-found {
+	height: calc(100vh - 150px);
+}
 body,
 input,
 textarea,
@@ -51,7 +54,7 @@ button {
 main {
 	position: relative;
 	z-index: 0;
-	margin-left: 8rem;
+	margin-left: 5rem;
 	padding: 0px 1rem;
 	overflow-x: hidden;
 }

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { FC, LegacyRef, useEffect, useRef, useState } from "react";
-import { Footer, Sidebar } from ".";
+import { Footer, Particle, Sidebar } from ".";
 type LayoutType = {
 	title: string;
 	keywords?: string;
@@ -27,6 +27,7 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 				<link rel="manifest" href="manifest.json" />
 			</Head>
 			<body className="body" ref={bodyRef}>
+				<Particle />
 				<Sidebar isDark={isDark} setIsDark={setIsDark} />
 				<main>{children}</main>
 				<Footer />
