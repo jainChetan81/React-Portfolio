@@ -19,7 +19,7 @@
 	--font-color-link: #007deb;
 }
 
-body.body.dark {
+div.body.dark {
 	--text-primary: #b6b6b6;
 	--text-secondary: #ececec;
 	--bg-primary: #2b2b2b;
@@ -28,7 +28,7 @@ body.body.dark {
 	--card-rank: rgba(0, 0, 0, 0.65);
 	--card-background: #282e36;
 }
-body.body {
+div.body {
 	--text-primary: #1f1f1f;
 	--text-secondary: #000000;
 	--bg-primary: #beb8b8;
@@ -37,12 +37,14 @@ body.body {
 	--card-rank: rgba(255, 255, 255, 0.65);
 	--card-background: #9ca3aa;
 }
+div.body {
+	background-color: var(--bg-main);
+	color: var(--text-secondary);
+}
 body {
 	transition: 0.5s;
 	font-size: 1rem;
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--bg-main);
-	color: var(--text-secondary);
 	scrollbar-width: thin;
 	scrollbar-color: var(--font-color-link) #1e1e24;
 }
@@ -86,7 +88,7 @@ main #tsparticles {
 @media (max-width: 600px) {
 	main {
 		margin: 0;
-		padding: 0 2rem;
+		padding: 0;
 	}
 	.not-found {
 		height: calc(100vh - 288px);
