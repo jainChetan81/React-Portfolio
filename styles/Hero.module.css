@@ -23,7 +23,7 @@ section.hero .button {
 	border: none;
 	cursor: pointer;
 	background-color: var(--green);
-	color: #fff f;
+	color: #fff;
 	border-radius: 2rem;
 	font-weight: 500;
 	transition: filter 0.25s;
@@ -48,10 +48,11 @@ section.hero .hero_image img {
 @media (max-width: 600px) {
 	section.hero {
 		margin-top: 25%;
+		text-align: center;
 	}
 }
 @media (max-width: 480px) {
 	section.hero {
-		margin-top: 35%;
+		margin-top: 15%;
 	}
 }

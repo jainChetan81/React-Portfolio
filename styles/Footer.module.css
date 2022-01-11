@@ -53,7 +53,7 @@ footer.footer .social_media span {
 		transform: rotate(360deg);
 	}
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	footer.footer {
 		padding: 40px 100px;
 		flex-direction: column;
