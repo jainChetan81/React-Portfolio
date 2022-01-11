@@ -18,6 +18,22 @@
 .project > h1 {
 	border-bottom: 1.5px solid var(--text-primary);
 }
+.url {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.url a {
+	height: 40px;
+	width: 60px;
+}
+.url a svg {
+	margin-inline: auto;
+}
+.url a:nth-last-of-type(1) {
+	border-left: 1px solid var(--text-primary);
+}
 .project .pagination a h2 {
 	color: var(--bg-main);
 	text-shadow: -1px 0 var(--font-color-link), 0 1px var(--font-color-link), 1px 0 var(--font-color-link),
@@ -57,6 +73,11 @@
 	display: flex;
 	scrollbar-color: var(--font-color-link) #1e1e24;
 	scrollbar-width: thin;
+}
+@media screen and (max-width: 600px) {
+	.image_container {
+		height: 300px;
+	}
 }
 .image_container figure {
 	scroll-snap-align: start;

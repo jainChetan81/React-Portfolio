@@ -42,9 +42,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 							</time>
 						</span>
 					</div>
-					<span
-						className="bg-[#007deb] my-auto w-32 h-10 rounded-lg px-5"
-						style={{ columnCount: 2, columnRule: "2px solid var(--text-primary)" }}>
+					<span className={`${styles.url} bg-[#007deb] rounded-lg`}>
 						<a
 							className="opacity-90 hover:opacity-100 "
 							href={project.githubUrl}
@@ -70,12 +68,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 					<div className={styles.image_container}>
 						{project.sliderImages?.map((image) => (
 							<figure key={image.name}>
-								<Image
-									src={`${image.url}?tr=h-600,w=1000`}
-									alt="first"
-									layout="fill"
-									objectFit="contain"
-								/>
+								<Image src={`${image.url}?tr=h-600,w=1000`} alt="first" width={1000} height={600} />
 							</figure>
 						))}
 					</div>
