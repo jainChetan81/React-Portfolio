@@ -62,7 +62,6 @@ main {
 	z-index: 0;
 	margin-left: 5rem;
 	padding: 0px 1rem;
-	overflow-x: hidden;
 }
 body::-webkit-scrollbar {
 	width: 0.25rem;

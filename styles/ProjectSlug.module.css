@@ -5,14 +5,14 @@
 	overflow: hidden;
 	min-height: calc(100vh - 150px);
 }
-@media screen and (max-width: 600px) {
-	.project {
-		width: 100%;
-	}
-}
 @media screen and (max-width: 1000px) {
 	.project {
 		width: 90%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.project {
+		width: 100%;
 	}
 }
 .project > h1 {

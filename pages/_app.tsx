@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			setTimeout(() => {
 				if (!shallow) {
 					setLoading(false);
+					window.scrollTo(0, 0);
 				}
 			}, 2000);
 		};

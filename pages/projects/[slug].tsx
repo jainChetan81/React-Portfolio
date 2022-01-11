@@ -75,7 +75,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 				)}
 
 				<div
-					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start px-8 mt-10`}>
+					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start mt-10`}>
 					{previousProject.slug && (
 						<Link href={`/projects/${previousProject.slug}`}>
 							<a className="flex items-start cursor-pointer w-80 text-left justify-end float-left">
