@@ -3,6 +3,7 @@ section.hero {
 	justify-content: space-between;
 	gap: 8rem;
 	background: rgba(0, 0, 0, 0);
+	margin-top: 0;
 }
 section.hero .hero_text > p {
 	font-size: 1rem;
@@ -47,12 +48,12 @@ section.hero .hero_image img {
 }
 @media (max-width: 600px) {
 	section.hero {
-		margin-top: 25%;
+		padding-top: 25%;
 		text-align: center;
 	}
 }
 @media (max-width: 480px) {
 	section.hero {
-		margin-top: 15%;
+		padding-top: 15%;
 	}
 }
