@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				if (!shallow) {
 					setLoading(false);
 				}
-			}, 1000);
+			}, 2000);
 		};
 		const handleRouteChangeError = (err: any, url: string) => {
 			if (err.cancelled) {
