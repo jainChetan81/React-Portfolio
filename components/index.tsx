@@ -7,4 +7,5 @@ import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
-export { Layout, Modal, Sidebar, Footer, Particle, Hero, About, Projects, Contact };
+import Loader from "./Loader";
+export { Layout, Modal, Sidebar, Footer, Particle, Hero, About, Projects, Contact, Loader };

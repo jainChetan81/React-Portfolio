@@ -66,8 +66,8 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 				</div>
 				{project.sliderImages?.length && (
 					<div className={styles.image_container}>
-						{project.sliderImages?.map((image) => (
-							<figure key={image.name}>
+						{project.sliderImages?.map((image, i) => (
+							<figure key={image.name + i}>
 								<Image src={`${image.url}?tr=h-600,w=1000`} alt="first" width={1000} height={600} />
 							</figure>
 						))}
