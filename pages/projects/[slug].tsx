@@ -78,7 +78,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start mt-10`}>
 					{previousProject.slug && (
 						<Link href={`/projects/${previousProject.slug}`}>
-							<a className="flex items-start cursor-pointer w-80 text-left justify-end float-left">
+							<a className="flex items-start cursor-pointer w-full text-left justify-end float-left">
 								<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
 								<aside>
 									<h2 className="font-bold text-2xl uppercase">Previous</h2>
@@ -89,7 +89,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 					)}
 					{nextProject.slug && (
 						<Link href={`/projects/${nextProject.slug}`}>
-							<a className="flex items-start cursor-pointer w-80 text-right justify-end float-right">
+							<a className="flex items-start cursor-pointer w-full text-right justify-end float-right">
 								<aside>
 									<h2 className="font-bold text-2xl uppercase">NEXT</h2>
 									<p className=" opacity-40">{nextProject.summary}</p>
