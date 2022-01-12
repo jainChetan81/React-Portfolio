@@ -20,6 +20,9 @@ const About: FC = () => {
 		"jest",
 		"mongodb",
 		"pwa",
+		"firebase",
+		"strapi",
+		"bootstrap",
 	];
 	return (
 		<section className={styles.about} id="about">
@@ -59,7 +62,7 @@ const About: FC = () => {
 						<div className={styles.hard_ability} key={ability}>
 							<ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
 								<Image
-									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${ability}?tr=w-34,h-34`}
+									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${ability}?tr=w-34,h-34,r-20`}
 									alt="React"
 									height={34}
 									width={34}
