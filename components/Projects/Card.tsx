@@ -46,8 +46,8 @@ const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, e
 					<a className={styles.btn}>Read More</a>
 				</Link>
 				<div className={styles.streamers}>
-					{technologies.map((tech, i) => (
-						<div className={styles.streamer} key={tech.icon}>
+					{technologies.slice(0, 6).map((tech, i) => (
+						<div className={styles.streamer} key={tech.icon + i}>
 							<div className={styles.icon}>
 								<Image
 									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30`}
