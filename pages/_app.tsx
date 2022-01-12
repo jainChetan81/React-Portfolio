@@ -4,17 +4,20 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Loader } from "../components";
+import * as ga from "../libs/google_analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const [loading, setLoading] = useState<boolean>(false);
 	useEffect(() => {
 		const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
+			ga.pageview(url);
 			if (!shallow) {
 				setLoading(true);
 			}
 		};
 		const handleRouteComplete = (url: string, { shallow }: { shallow: boolean }) => {
+			ga.pageview(url);
 			setTimeout(() => {
 				if (!shallow) {
 					setLoading(false);
