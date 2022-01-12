@@ -7,9 +7,10 @@ section.projects .projects_container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
-	gap: 100px 80px;
+	gap: 130px 80px;
 	padding: 10px;
-	padding-block: 100px;
+	padding-top: 100px;
+	padding-bottom: 152px;
 	overflow: hidden;
 }
 section.projects .projects_container .project {
@@ -205,6 +206,9 @@ section.projects .projects_container .project footer .tech_list {
 	transition: transform 200ms ease, opacity 100ms linear;
 }
 .card:hover .back .streamers {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
 	width: 100%;
 	justify-content: space-between;
 }
@@ -217,7 +221,7 @@ section.projects .projects_container .project footer .tech_list {
 .card:hover .background {
 	transition: var(--transition), opacity 100ms linear;
 	opacity: 1;
-	transform: scale(1.25, 1.15) translateY(5%);
+	transform: scale(1.25, 1.4) translateY(5%);
 }
 @keyframes gameName {
 	0% {

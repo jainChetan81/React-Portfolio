@@ -132,57 +132,97 @@ const Particle: FC = () => {
 						},
 						image: [
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/bootstrap-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/bootstrap?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/html-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/html?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/js-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/javascript?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/mysql-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/mysql?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/node-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/node?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/sass-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/sass?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vscode-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vscode?tr=w-20,h-20`,
 								width: 20,
 								height: 20,
 							},
 							{
-								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vue-icon.svg??tr=w-20,h-20`,
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/redux?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/tailwindcss?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/nextjs?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/pwa?tr=w-20,h-20,r-100`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/jest?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/cypress?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/mongodb?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/firebase?tr=w-20,h-20`,
+								width: 20,
+								height: 20,
+							},
+							{
+								src: `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/strapi?tr=w-20,h-20,r-100`,
 								width: 20,
 								height: 20,
 							},

@@ -4,6 +4,23 @@ import Image from "next/image";
 import type { FC } from "react";
 
 const About: FC = () => {
+	const abilities: string[] = [
+		"react",
+		"nextjs",
+		"typescript",
+		"html",
+		"css",
+		"node",
+		"javascript",
+		"mysql",
+		"tailwindcss",
+		"redux",
+		"sass",
+		"cypress",
+		"jest",
+		"mongodb",
+		"pwa",
+	];
 	return (
 		<section className={styles.about} id="about">
 			<div className={styles.about_text}>
@@ -38,81 +55,18 @@ const About: FC = () => {
 					<h3>Here are my main skills:</h3>
 				</ScrollAnimation>
 				<div className={styles.hard_skills}>
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=w-34,h-34`}
-								alt="React"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/vue-icon.svg?tr=w-34,h-34`}
-								alt="Vue"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.3 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/js-icon.svg?tr=w-34,h-34`}
-								alt="JavaScript"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/html-icon.svg?tr=w-34,h-34`}
-								alt="Html"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.5 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg?tr=w-34,h-34`}
-								alt="Css"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/node-icon.svg?tr=w-34,h-34`}
-								alt="Node"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
-
-					<div className={styles.hard_ability}>
-						<ScrollAnimation animateIn="fadeInUp" delay={0.7 * 1000}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg?tr=w-34,h-34`}
-								alt="Typescript"
-								height={34}
-								width={34}
-							/>
-						</ScrollAnimation>
-					</div>
+					{abilities.map((ability: string) => (
+						<div className={styles.hard_ability} key={ability}>
+							<ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${ability}?tr=w-34,h-34`}
+									alt="React"
+									height={34}
+									width={34}
+								/>
+							</ScrollAnimation>
+						</div>
+					))}
 				</div>
 			</div>
 			<div className={styles.about_image}>

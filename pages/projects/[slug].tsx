@@ -64,7 +64,7 @@ const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
 				<div className={styles.markdown}>
 					<ReactMarkdown>{project.description}</ReactMarkdown>
 				</div>
-				{project.sliderImages?.length && (
+				{project.sliderImages?.length > 0 && (
 					<div className={styles.image_container}>
 						{project.sliderImages?.map((image, i) => (
 							<figure key={image.name + i}>

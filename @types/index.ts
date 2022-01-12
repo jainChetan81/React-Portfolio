@@ -19,7 +19,7 @@ export type Project = {
 	externalUrl: string;
 	githubUrl: string;
 	summary: string;
-	technologies: string[];
+	technologies: { name: string; icon: string }[];
 	description: string;
 	displayImage: StrapiImage;
 	sliderImages: {

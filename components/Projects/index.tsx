@@ -20,6 +20,7 @@ const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 							githubUrl={project.githubUrl}
 							displayImage={project.displayImage}
 							externalUrl={project.externalUrl}
+							technologies={project.technologies}
 						/>
 					</ScrollAnimation>
 				))}

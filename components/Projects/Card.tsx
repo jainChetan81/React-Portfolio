@@ -12,8 +12,9 @@ type Props = {
 	githubUrl: string;
 	displayImage: StrapiImage;
 	externalUrl: string;
+	technologies: { name: string; icon: string }[];
 };
-const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, externalUrl }) => {
+const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, externalUrl, technologies }) => {
 	return (
 		<article className={styles.card}>
 			<span className={styles.rank}>{rank}</span>
@@ -45,39 +46,19 @@ const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, e
 					<a className={styles.btn}>Read More</a>
 				</Link>
 				<div className={styles.streamers}>
-					<div className={styles.streamer}>
-						<div className={styles.icon}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/react-icon.svg?tr=w-30,h-30`}
-								width={30}
-								height={30}
-								alt="react icon"
-							/>
+					{technologies.map((tech, i) => (
+						<div className={styles.streamer} key={tech.icon}>
+							<div className={styles.icon}>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30`}
+									width={30}
+									height={30}
+									alt={`${tech} icon`}
+								/>
+							</div>
+							<p className={styles.name}>{tech.name}</p>
 						</div>
-						<p className={styles.name}>React</p>
-					</div>
-					<div className={styles.streamer}>
-						<div className={styles.icon}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/typescript-icon.svg?tr=w-30,h-30`}
-								width={30}
-								height={30}
-								alt="typescript icon"
-							/>
-						</div>
-						<p className={styles.name}>Typescript</p>
-					</div>
-					<div className={styles.streamer}>
-						<div className={styles.icon}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/css-icon.svg?tr=w-30,h-30`}
-								width={30}
-								height={30}
-								alt="css icon"
-							/>
-						</div>
-						<p className={styles.name}>CSS</p>
-					</div>
+					))}
 				</div>
 			</div>
 			<div className={styles.background}></div>

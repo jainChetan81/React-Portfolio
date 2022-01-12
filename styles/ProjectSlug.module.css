@@ -59,9 +59,43 @@
 .markdown {
 	margin-block: 2rem;
 }
-.markdown p {
-	line-height: 25px;
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+	font-weight: bold;
+	margin-block: 1rem;
+}
+.markdown h1 {
+	font-size: 3rem;
+}
+.markdown h2 {
+	font-size: 2.5rem;
+}
+.markdown h3 {
+	font-size: 2rem;
+}
+.markdown h4 {
+	font-size: 1.5rem;
+}
+.markdown h5 {
+	font-size: 1.25rem;
+}
+.markdown h6 {
 	font-size: 1rem;
+}
+.markdown p {
+	font-size: 1rem;
+	margin-block: 0.5rem;
+}
+.markdown ul {
+	list-style: disc;
+}
+.markdown ul li {
+	margin-block: 0.8rem;
+	margin-left: 20px;
 }
 .image_container {
 	width: 100%;
@@ -97,4 +131,11 @@
 }
 .image_container::-webkit-scrollbar-thumb {
 	background-color: var(--font-color-link);
+}
+
+@media screen and (min-width: 1000px) {
+	.image_container figure {
+		scroll-margin-left: 100px;
+		width: calc(100% - 100px);
+	}
 }
