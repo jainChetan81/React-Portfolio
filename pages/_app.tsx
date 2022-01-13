@@ -11,15 +11,16 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const [loading, setLoading] = useState<boolean>(false);
 	useEffect(() => {
 		const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
-			ga.pageview(url);
-			if (!shallow) {
+			//if the url is external or regarding api's dont't track or show the loader
+			if (!shallow && !url.includes("api")) {
+				ga.pageview(url);
 				setLoading(true);
 			}
 		};
 		const handleRouteComplete = (url: string, { shallow }: { shallow: boolean }) => {
-			ga.pageview(url);
 			setTimeout(() => {
 				if (!shallow) {
+					ga.pageview(url);
 					setLoading(false);
 					window.scrollTo(0, 0);
 				}
