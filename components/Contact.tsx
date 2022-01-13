@@ -1,6 +1,7 @@
 import styles from "../styles/Contact.module.css";
 import Image from "next/image";
-import { FC, FormEvent, MutableRefObject, useRef } from "react";
+import { FormEvent, MutableRefObject, useRef } from "react";
+import type { FC } from "react";
 import emailjs from "emailjs-com";
 
 const Contact: FC = () => {

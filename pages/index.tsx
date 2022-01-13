@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import { Project } from "../@types";
+import type { Project } from "../@types";
 import { About, Contact, Hero, Layout, Projects } from "../components";
 import { NetworkDetector } from "../hoc";
 
 const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
 	return (
-		<Layout title="Chetan Portfolio | Home">
+		<Layout title="Portfolio - Chetan Jain">
 			<Hero />
 			<About />
 			<Projects projects={projects} />

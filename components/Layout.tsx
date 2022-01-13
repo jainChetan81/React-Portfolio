@@ -1,6 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
-import { FC, LegacyRef, useEffect, useRef, useState } from "react";
+import { LegacyRef, useEffect, useRef, useState } from "react";
+import type { FC } from "react";
 import { Footer, Particle, Sidebar } from ".";
 type LayoutType = {
 	title: string;
@@ -36,9 +37,8 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 	);
 };
 Layout.defaultProps = {
-	title: "Portfolio - Chetan Jain",
 	description: "A Portfolio of Chetan Jain to showcase various skills and projects",
-	keywords: "[NextJs, Tailwind, Typescript]",
+	keywords: "[NextJS, Tailwind, Typescript, Strapi, PWA, PostCss]",
 };
 Layout.propTypes = {
 	title: PropTypes.string.isRequired,

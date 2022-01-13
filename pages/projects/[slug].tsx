@@ -4,7 +4,7 @@ import type { FC } from "react";
 import { FaExternalLinkAlt, FaGithub, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import styles from "../../styles/ProjectSlug.module.css";
-import { Project } from "../../@types";
+import type { Project } from "../../@types";
 import { Layout } from "../../components";
 import { NetworkDetector } from "../../hoc";
 
@@ -14,7 +14,7 @@ type Props = {
 	nextProject: Project;
 	notFound?: boolean;
 };
-const Project: FC<Props> = ({ previousProject, project, nextProject }) => {
+const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) => {
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -147,4 +147,4 @@ export async function getStaticProps({ params: { slug } }: any) {
 	};
 }
 
-export default NetworkDetector(Project);
+export default NetworkDetector(ProjectDetails);
