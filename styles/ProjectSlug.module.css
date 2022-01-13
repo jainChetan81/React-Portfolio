@@ -86,9 +86,24 @@
 .markdown h6 {
 	font-size: 1rem;
 }
-.markdown p {
+.markdown strong {
+	text-transform: capitalize;
+	margin-right: 10px;
+	line-height: 20px;
+	font-size: 1.1rem;
+}
+.markdown p,
+.markdown code {
 	font-size: 1rem;
 	margin-block: 0.5rem;
+}
+.markdown code {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	padding: 1rem;
+	border-radius: 5px;
+	display: inline-block;
+	font-weight: 500;
 }
 .markdown ul {
 	list-style: disc;
