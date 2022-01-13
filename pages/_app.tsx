@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/normalize.css";
+import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -42,7 +43,31 @@ function MyApp({ Component, pageProps }: AppProps) {
 		};
 	});
 
-	return <>{loading ? <Loader /> : <Component {...pageProps} />}</>;
+	return (
+		<>
+			{/* Global Site Tag (gtag.js) - Google Analytics */}
+			<Script
+				strategy="afterInteractive"
+				src={`https://www.googletagmanager.com/gtag/js?id=${ga.GA_TRACKING_ID}`}
+			/>
+			<Script
+				id="gtag-init"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${ga.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+				}}
+			/>
+			{loading ? <Loader /> : <Component {...pageProps} />}
+		</>
+	);
 }
 
 export default MyApp;

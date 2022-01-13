@@ -42,24 +42,6 @@ class MyDocument extends Document {
 					<meta property="og:site_name" content="Portfolio - Chetan Jain" />
 					<meta property="og:url" content="https://thechetanjain.in" />
 					<meta property="og:image" content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
-					{/* Global Site Tag (gtag.js) - Google Analytics */}
-					{/* Global Site Tag (gtag.js) - Google Analytics */}
-					<script
-						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-					/>
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
-										window.dataLayer = window.dataLayer || [];
-										function gtag(){dataLayer.push(arguments);}
-										gtag('js', new Date());
-										gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-										page_path: window.location.pathname,
-										});
-          							`,
-						}}
-					/>
 				</Head>
 				<body>
 					<Main />
