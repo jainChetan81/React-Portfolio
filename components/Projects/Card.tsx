@@ -50,7 +50,7 @@ const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, e
 						<div className={styles.streamer} key={tech.icon + i}>
 							<div className={styles.icon}>
 								<Image
-									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30`}
+									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30,r-20`}
 									width={30}
 									height={30}
 									alt={`${tech} icon`}

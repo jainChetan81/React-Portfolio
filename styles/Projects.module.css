@@ -186,7 +186,7 @@ section.projects .projects_container .project footer .tech_list {
 	height: 390px;
 }
 .card:hover .rank {
-	transform: translate(120%, -17%);
+	transform: translate(125%, -120%);
 }
 .card:hover .front {
 	transform: translateY(-30%) scale(0.8);
