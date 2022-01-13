@@ -4,6 +4,7 @@ section.hero {
 	gap: 8rem;
 	background: rgba(0, 0, 0, 0);
 	margin-top: 0;
+	padding-top: 50px;
 }
 section.hero .hero_text > p {
 	font-size: 1rem;
