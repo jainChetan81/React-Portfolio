@@ -1,6 +1,6 @@
 footer.footer {
 	background-color: var(--bg-primary);
-	padding: 30px 150px;
+	padding-inline: 150px;
 	height: 100px;
 	margin-top: 50px;
 	display: flex;
@@ -63,8 +63,9 @@ footer.footer .social_media span {
 }
 @media (max-width: 600px) {
 	footer.footer {
-		padding: 40px 10px;
-		padding-bottom: 60px;
+		padding: 10px;
+		gap: 0;
+		height: 150px;
 	}
 	footer.footer p {
 		font-size: 12px;

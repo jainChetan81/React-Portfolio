@@ -42,7 +42,9 @@ const Card: FC<Props> = ({
 			<div className={styles.front}>
 				<Image
 					className={styles.thumbnail}
-					src={`${displayImage?.url || "https://ik.imagekit.io/clhowstalgz/games/skyrim.jpg"}?tr=w-250,h-300`}
+					src={`${
+						displayImage?.url || `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/portfolio/skyrim.jpg`
+					}?tr=w-250,h-300`}
 					height={300}
 					width={250}
 					alt={`${name} thumbnail`}

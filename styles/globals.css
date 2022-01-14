@@ -75,6 +75,7 @@ body::-webkit-scrollbar-thumb {
 section {
 	margin-top: 100px;
 	min-height: calc(100vh - 250px);
+	position: relative;
 }
 main #tsparticles {
 	position: absolute;
@@ -112,4 +113,39 @@ main #tsparticles {
 }
 .theme_icon {
 	display: none;
+}
+.custom-shape-divider-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+	position: relative;
+	display: block;
+	width: calc(147% + 1.3px);
+	height: 244px;
+}
+
+.custom-shape-divider-top .shape-fill {
+	fill: #2b2b2b;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.custom-shape-divider-top svg {
+		width: calc(147% + 1.3px);
+		height: 217px;
+	}
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+	.custom-shape-divider-top svg {
+		width: calc(129% + 1.3px);
+		height: 152px;
+	}
 }
