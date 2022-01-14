@@ -9,14 +9,35 @@ type Props = {
 	name: string;
 	slug: string;
 	summary: string;
+	endDate: string;
 	githubUrl: string;
 	displayImage: StrapiImage;
 	externalUrl: string;
 	technologies: { name: string; icon: string }[];
 };
-const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, externalUrl, technologies }) => {
+const Card: FC<Props> = ({
+	rank,
+	name,
+	slug,
+	summary,
+	githubUrl,
+	displayImage,
+	externalUrl,
+	technologies,
+	endDate,
+}) => {
 	return (
-		<article className={styles.card}>
+		<article className={styles.card} itemScope itemType="https://schema.org/Article">
+			<meta itemProp="name" content={name} />
+			<meta itemProp="url" content={`https://thechetanjain.in/projects/${slug}`} />
+			<meta itemProp="image" content={displayImage.url} />
+			<meta itemProp="description" content={summary} />
+			<meta itemProp="author" content="The Chetan Jain" />
+			<meta itemProp="datePublished" content={endDate} />
+			<meta itemProp="publisher" content="The Chetan Jain" />
+			<meta itemProp="inLanguage" content="en" />
+			<meta itemProp="isFamilyFriendly" content="true" />
+
 			<span className={styles.rank}>{rank}</span>
 			<div className={styles.front}>
 				<Image
@@ -24,7 +45,7 @@ const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, e
 					src={`${displayImage?.url || "https://ik.imagekit.io/clhowstalgz/games/skyrim.jpg"}?tr=w-250,h-300`}
 					height={300}
 					width={250}
-					alt="game"
+					alt={`${name} thumbnail`}
 				/>
 				<h2 className={styles.name}>{name}</h2>
 				<p className={styles.links}>
@@ -43,7 +64,9 @@ const Card: FC<Props> = ({ rank, name, slug, summary, githubUrl, displayImage, e
 					<p className={styles.game_stat}>{summary}</p>
 				</div>
 				<Link href={`/projects/${slug}`}>
-					<a className={styles.btn}>Read More</a>
+					<a itemProp="author" className={styles.btn}>
+						Read More
+					</a>
 				</Link>
 				<div className={styles.streamers}>
 					{technologies.slice(0, 6).map((tech, i) => (

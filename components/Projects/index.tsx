@@ -21,6 +21,7 @@ const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 							displayImage={project.displayImage}
 							externalUrl={project.externalUrl}
 							technologies={project.technologies}
+							endDate={project.endDate}
 						/>
 					</ScrollAnimation>
 				))}

@@ -16,7 +16,12 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.logo}>
 					<Link href="/">
 						<a className={styles.nav_link}>
-							<span className={styles.link_text + " " + styles.logo_text}>JChetan</span>
+							<span
+								itemProp="name"
+								id="Chetan Jain"
+								className={styles.link_text + " " + styles.logo_text}>
+								JChetan
+							</span>
 							<svg
 								aria-hidden="true"
 								focusable="false"
