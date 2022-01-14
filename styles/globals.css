@@ -44,9 +44,6 @@ div.body {
 body {
 	transition: 0.5s;
 	font-size: 1rem;
-	-webkit-font-smoothing: antialiased;
-	scrollbar-width: thin;
-	scrollbar-color: var(--font-color-link) #1e1e24;
 }
 .not-found {
 	height: calc(100vh - 150px);
@@ -62,22 +59,30 @@ main {
 	z-index: 0;
 	margin-left: 5rem;
 	padding: 0px 1rem;
+	scroll-snap-type: y mandatory;
+	-webkit-overflow-scrolling: touch; /* Needed to work on iOS Safari */
+	overflow-y: scroll;
+	-webkit-font-smoothing: antialiased;
+	scrollbar-width: thin;
+	scrollbar-color: var(--font-color-link) #1e1e24;
 }
-body::-webkit-scrollbar {
+main::-webkit-scrollbar {
 	width: 0.25rem;
 }
-body::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
 	background-color: #1e1e24;
 }
-body::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
 	background-color: var(--font-color-link);
 }
 section {
 	margin-top: 100px;
 	min-height: calc(100vh - 250px);
 	position: relative;
+	min-height: 100vh;
+	scroll-snap-align: start;
 }
-main #tsparticles {
+.body #tsparticles {
 	position: absolute;
 	left: 0;
 	top: 0;

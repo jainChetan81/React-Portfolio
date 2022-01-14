@@ -6,8 +6,8 @@ section.contact::before {
 	position: absolute;
 	font-size: 24vw;
 	letter-spacing: -25px;
-	top: -4rem;
-	left: 0;
+	top: -6rem;
+	left: -3rem;
 	width: 100%;
 	height: 100%;
 	font-weight: 800;
@@ -31,6 +31,7 @@ section.contact::before {
 	section.contact::before {
 		font-size: 20vw;
 		letter-spacing: -5px;
+		left: 0;
 		top: -1rem;
 	}
 }
