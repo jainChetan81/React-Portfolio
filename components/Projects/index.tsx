@@ -7,8 +7,6 @@ import type { Project } from "../../@types";
 const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 	return (
 		<section className={styles.projects} id="projects">
-			<h2 className="capitalize">my projects</h2>
-
 			<div className={styles.projects_container}>
 				{projects.map((project: Project) => (
 					<ScrollAnimation animateIn="flipInX" key={project.rank}>

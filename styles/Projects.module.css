@@ -3,6 +3,44 @@ section.projects h2 {
 	font-size: 40px;
 	margin-bottom: 10px;
 }
+section.projects {
+	padding-top: 100px;
+}
+section.projects::before {
+	content: "Projects";
+	position: absolute;
+	font-size: 23vw;
+	letter-spacing: -25px;
+	top: -6rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: 800;
+	color: var(--bg-primary);
+	text-shadow: -1px 0 var(--bg-primary), 0 1px var(--bg-primary), 1px 0 var(--bg-primary), 0 -1px var(--bg-primary);
+	opacity: 0.5;
+	z-index: -1;
+}
+@media (max-width: 1000px) {
+	section.projects {
+		padding-top: 50px;
+	}
+	section.projects::before {
+		top: 0rem;
+		font-size: 20vw;
+		letter-spacing: -5px;
+	}
+}
+@media (max-width: 740px) {
+	section.about {
+		padding-top: 100px;
+	}
+	section.about::before {
+		font-size: 25vw;
+		letter-spacing: -5px;
+		top: 1rem;
+	}
+}
 section.projects .projects_container {
 	display: flex;
 	flex-flow: row wrap;

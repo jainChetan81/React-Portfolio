@@ -2,7 +2,44 @@ section.about {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
+	padding-top: 300px;
 }
+section.about::before {
+	content: "About";
+	position: absolute;
+	font-size: 28vw;
+	letter-spacing: -25px;
+	top: -4rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-weight: 800;
+	color: var(--bg-primary);
+	text-shadow: -1px 0 var(--bg-primary), 0 1px var(--bg-primary), 1px 0 var(--bg-primary), 0 -1px var(--bg-primary);
+	opacity: 0.5;
+	z-index: -1;
+}
+@media (max-width: 1000px) {
+	section.about {
+		padding-top: 200px;
+	}
+	section.about::before {
+		top: -2rem;
+		font-size: 25vw;
+		letter-spacing: -5px;
+	}
+}
+@media (max-width: 740px) {
+	section.about {
+		padding-top: 100px;
+	}
+	section.about::before {
+		font-size: 25vw;
+		letter-spacing: -5px;
+		top: 1rem;
+	}
+}
+
 section.about .hard_skills {
 	margin-block: 16px;
 	display: flex;

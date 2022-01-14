@@ -28,10 +28,6 @@ const Contact: FC = () => {
 	};
 	return (
 		<section className={styles.contact} id="contact">
-			<header>
-				<h2 className="capitalize">contact me</h2>
-				<p>If you have seen my potential or want to talk to me, do not hesitate to send me a message.</p>
-			</header>
 			<div className={styles.contacts}>
 				<div className={styles.contact_info}>
 					<Image
@@ -52,6 +48,7 @@ const Contact: FC = () => {
 					<a href="tel:+5531981213843">(+91) 87007-76723</a>
 				</div>
 			</div>
+			<p>If you have seen my potential or want to talk to me, do not hesitate to send me a message.</p>
 			<div className={styles.form}>
 				<h2>Get in touch using the form below</h2>
 				<form ref={form} onSubmit={handleSubmit}>

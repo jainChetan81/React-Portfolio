@@ -131,7 +131,7 @@ main #tsparticles {
 }
 
 .custom-shape-divider-top .shape-fill {
-	fill: #2b2b2b;
+	fill: var(--bg-primary);
 }
 
 /** For tablet devices **/

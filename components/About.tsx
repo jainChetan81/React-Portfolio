@@ -27,12 +27,9 @@ const About: FC = () => {
 	return (
 		<section className={styles.about} id="about">
 			<div className={styles.about_text}>
-				<ScrollAnimation animateIn="fadeInLeft">
-					<h2>About me</h2>
-				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000}>
 					<p>
-						My name is Chetan Jain, I am a computer technician with a great passion for programming. I am
+						My name is Chetan Jain, I am a Full Stack Developer with great passion for programming. I am
 						passionate about delivering solutions that add to people lives and at the same time challenge
 						me. Improved my skills as a Front-End and Back-End developer
 					</p>
@@ -42,15 +39,16 @@ const About: FC = () => {
 					delay={0.4 * 1000}
 					style={{ marginTop: "2rem", marginBottom: "2rem" }}>
 					<p>
-						I develop websites and applications using HTML, CSS, and JavaScript. I am familiar with
-						developing layouts that they provide me. I am always improving myself with each project they put
-						in my hands.
+						I develop websites and applications using HTML, CSS, and JavaScript. I choose different
+						technologies ranging from front end and back end to mobile applications and I always improve
+						myself with each project that I choose to challenge myself with.
 					</p>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInLeft" delay={0.6 * 1000}>
 					<p>
-						I am a dedicated person who pursues his dreams, hardworking and results oriented, I always seek
-						to achieve my best version.
+						I am seeking to find an opportunity to work in a fun and challenging environment that will
+						encourage me to improve my skills and learn new ones as well as my aim is to work in the minimum
+						amount required and delivering the fastest and best product desired.
 					</p>
 				</ScrollAnimation>
 
