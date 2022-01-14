@@ -3,6 +3,7 @@ section.about {
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 	padding-top: 300px;
+	overflow: hidden;
 }
 section.about::before {
 	content: "About";
@@ -31,13 +32,13 @@ section.about::before {
 }
 @media (max-width: 740px) {
 	section.about {
-		padding-top: 100px;
+		padding-top: 150px;
 	}
 	section.about::before {
 		left: 0;
 		font-size: 25vw;
 		letter-spacing: -5px;
-		top: 1rem;
+		top: 0rem;
 	}
 }
 

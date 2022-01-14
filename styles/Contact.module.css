@@ -16,23 +16,26 @@ section.contact::before {
 	opacity: 0.5;
 	z-index: -1;
 }
-@media (max-width: 740px) {
-	section.contact::before {
-		font-size: 25vw;
-		letter-spacing: -5px;
-		top: 4rem;
-	}
-}
 
 @media (max-width: 1000px) {
 	section.contact {
-		padding-top: 0px;
+		padding-top: 100px;
 	}
 	section.contact::before {
 		font-size: 20vw;
 		letter-spacing: -5px;
 		left: 0;
 		top: -1rem;
+	}
+}
+@media (max-width: 740px) {
+	section.contact {
+		padding-top: 10px;
+	}
+	section.contact::before {
+		font-size: 23vw;
+		letter-spacing: -5px;
+		top: 0;
 	}
 }
 

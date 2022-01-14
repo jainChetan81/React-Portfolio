@@ -21,6 +21,17 @@ section.projects::before {
 	opacity: 0.5;
 	z-index: -1;
 }
+@media (max-width: 740px) {
+	section.projects {
+		padding-top: 100px;
+	}
+	section.projects::before {
+		left: 0;
+		font-size: 25vw;
+		letter-spacing: -5px;
+		top: 1rem;
+	}
+}
 @media (max-width: 1000px) {
 	section.projects {
 		padding-top: 50px;
@@ -31,17 +42,7 @@ section.projects::before {
 		letter-spacing: -5px;
 	}
 }
-@media (max-width: 740px) {
-	section.about {
-		padding-top: 100px;
-	}
-	section.about::before {
-		left: 0;
-		font-size: 25vw;
-		letter-spacing: -5px;
-		top: 1rem;
-	}
-}
+
 section.projects .projects_container {
 	display: flex;
 	flex-flow: row wrap;
