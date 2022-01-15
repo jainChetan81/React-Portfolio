@@ -10,7 +10,6 @@ import * as ga from "../libs/google_analytics";
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const [loading, setLoading] = useState<boolean>(false);
-	const [display, setDisplay] = useState<boolean>(false);
 	useEffect(() => {
 		const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
 			//if the url is external or regarding api's dont't track or show the loader
@@ -43,12 +42,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 			router.events.off("routeChangeError", handleRouteChangeError);
 		};
 	});
-	useEffect(() => {
-		setDisplay(true);
-		setTimeout(() => {
-			setDisplay(false);
-		}, 3000);
-	}, []);
 
 	return (
 		<>
@@ -72,7 +65,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
 				}}
 			/>
-			{loading ? <Loader /> : <div>{display ? <MatrixRainLoader /> : <Component {...pageProps} />}</div>};
+			{loading ? <Loader /> : <Component {...pageProps} />};
 		</>
 	);
 }
