@@ -28,6 +28,9 @@ const Contact: FC = () => {
 	};
 	return (
 		<section className={styles.contact} id="contact">
+			<header>
+				<h2 className="capitalize inline-block sm:hidden">contact me</h2>
+			</header>
 			<div className={styles.contacts}>
 				<div className={styles.contact_info}>
 					<Image

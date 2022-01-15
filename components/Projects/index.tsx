@@ -8,6 +8,7 @@ const Projects: FC<{ projects: Project[] }> = ({ projects }) => {
 	return (
 		<section className={styles.projects} id="projects">
 			<div className={styles.projects_container}>
+				<h2 className="capitalize inline-block sm:hidden">my projects</h2>
 				{projects.map((project: Project) => (
 					<ScrollAnimation animateIn="flipInX" key={project.rank}>
 						<Card

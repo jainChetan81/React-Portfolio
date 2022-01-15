@@ -32,13 +32,10 @@ section.about::before {
 }
 @media (max-width: 740px) {
 	section.about {
-		padding-top: 150px;
+		padding-top: 0;
 	}
 	section.about::before {
-		left: 0;
-		font-size: 25vw;
-		letter-spacing: -5px;
-		top: 0rem;
+		content: none;
 	}
 }
 
@@ -58,10 +55,9 @@ section.about .hard_ability img {
 	width: 34px;
 }
 section.about h2 {
-	display: inline-block;
 	margin-bottom: 20px;
 	border-bottom: 2px solid var(--blue);
-	font-size: 30px;
+	font-size: 40px;
 }
 section.about h3 {
 	margin-top: 20px;

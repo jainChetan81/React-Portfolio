@@ -27,6 +27,9 @@ const About: FC = () => {
 	return (
 		<section className={styles.about} id="about">
 			<div className={styles.about_text}>
+				<ScrollAnimation animateIn="fadeInLeft">
+					<h2 className="inline-block sm:hidden">About me</h2>
+				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000}>
 					<p>
 						My name is Chetan Jain, I am a Full Stack Developer with great passion for programming. I am

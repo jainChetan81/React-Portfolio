@@ -1,7 +1,9 @@
-section.projects h2 {
+section.projects .projects_container > h2 {
 	text-align: center;
 	font-size: 40px;
 	margin-bottom: 10px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid var(--blue);
 }
 section.projects {
 	padding-top: 100px;
@@ -23,13 +25,10 @@ section.projects::before {
 }
 @media (max-width: 740px) {
 	section.projects {
-		padding-top: 100px;
+		padding-top: 0;
 	}
 	section.projects::before {
-		left: 0;
-		font-size: 25vw;
-		letter-spacing: -5px;
-		top: 1rem;
+		content: none;
 	}
 }
 @media (max-width: 1000px) {
@@ -138,6 +137,7 @@ section.projects .projects_container .project footer .tech_list {
 	cursor: pointer;
 	font-size: 2rem;
 	width: 250px;
+	text-align: center;
 }
 .rank {
 	font-weight: bold;
