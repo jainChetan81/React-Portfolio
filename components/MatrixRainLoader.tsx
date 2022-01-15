@@ -70,10 +70,7 @@ const MatrixRainLoader: FC = () => {
 		const animate = (timeStamp: number) => {
 			const deltaTime: number = timeStamp - lastTime;
 			lastTime = timeStamp;
-			if (timeStamp > 4000) {
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-			}
-			if (timer > nextFrame && timeStamp < 4000) {
+			if (timer > nextFrame) {
 				ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 				ctx.textAlign = "center";
 				ctx.fillRect(0, 0, canvas.width, canvas.height);
