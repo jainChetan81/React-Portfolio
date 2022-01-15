@@ -47,7 +47,8 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 							className="opacity-90 hover:opacity-100 "
 							href={project.githubUrl}
 							target="_blank"
-							rel="noreferrer">
+							rel="noreferrer"
+							aria-label="Github link to Project">
 							<FaGithub className="w-6 h-6 mt-2" />
 						</a>
 						{project.externalUrl && (
@@ -55,7 +56,8 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 								className="opacity-90 hover:opacity-100 "
 								href={project.externalUrl}
 								target="_blank"
-								rel="noreferrer">
+								rel="noreferrer"
+								aria-label="Hosted link to Project">
 								<FaExternalLinkAlt className="w-8 h-8 pt-2.5" />
 							</a>
 						)}
@@ -78,7 +80,9 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start mt-10`}>
 					{previousProject.slug && (
 						<Link href={`/projects/${previousProject.slug}`}>
-							<a className="flex items-start cursor-pointer w-full text-left justify-end float-left">
+							<a
+								className="flex items-start cursor-pointer w-full text-left justify-end float-left"
+								aria-label="Previous Project">
 								<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
 								<aside>
 									<h2 className="font-bold text-2xl uppercase">Previous</h2>
@@ -89,7 +93,9 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 					)}
 					{nextProject.slug && (
 						<Link href={`/projects/${nextProject.slug}`}>
-							<a className="flex items-start cursor-pointer w-full text-right justify-end float-right">
+							<a
+								className="flex items-start cursor-pointer w-full text-right justify-end float-right"
+								aria-label="Next Project">
 								<aside>
 									<h2 className="font-bold text-2xl uppercase">NEXT</h2>
 									<p className=" opacity-40">{nextProject.summary}</p>

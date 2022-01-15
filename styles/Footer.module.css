@@ -47,7 +47,7 @@ footer.footer .social_media a {
 }
 footer.footer .social_media a:hover {
 	color: var(--text-primary);
-	scale: 1.5;
+	transform: scale(1.5);
 	border-bottom: none;
 }
 @keyframes spinning {

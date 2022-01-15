@@ -103,7 +103,7 @@ const MatrixRainLoader: FC = () => {
 
 	return (
 		<div className={styles.matrix}>
-			<canvas ref={ref} id="canvas"></canvas>
+			<canvas ref={ref}></canvas>
 		</div>
 	);
 };

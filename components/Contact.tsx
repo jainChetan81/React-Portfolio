@@ -83,10 +83,12 @@ const Contact: FC = () => {
 						minLength={50}
 						maxLength={100}
 						spellCheck="true"
-						role="textarea"
+						role="text"
 						arial-label="Enter your Message for this Mail"
 					/>
-					<button type="submit">Submit</button>
+					<button type="submit" aria-label="Submit the email form">
+						Submit
+					</button>
 				</form>
 			</div>
 		</section>

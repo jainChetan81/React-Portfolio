@@ -51,7 +51,7 @@ const Modal: FC<Props> = ({ show, onClose, children, title, type }) => {
 		<div data-testid="modal" className={styles.overlay}>
 			<div className={styles.modal}>
 				<div className={styles.header}>
-					<button type="button" onClick={handleClose}>
+					<button type="button" onClick={handleClose} aria-label="CLose the modal">
 						{getIcon(type)}
 					</button>
 				</div>

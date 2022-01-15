@@ -8,7 +8,7 @@ const Footer: FC = () => {
 	return (
 		<footer className={styles.footer}>
 			<Link href="/">
-				<a className={styles.logo} itemProp="name" id="Chetan Jain">
+				<a className={styles.logo} itemProp="name" id="Chetan Jain Logo">
 					<span>J</span>
 					<span>Chetan</span>
 				</a>

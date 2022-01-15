@@ -16,10 +16,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				<li className={styles.logo}>
 					<Link href="/">
 						<a className={styles.nav_link}>
-							<span
-								itemProp="name"
-								id="Chetan Jain"
-								className={styles.link_text + " " + styles.logo_text}>
+							<span itemProp="name" className={styles.link_text + " " + styles.logo_text}>
 								JChetan
 							</span>
 							<svg
@@ -46,7 +43,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 
 				<li className={styles.nav_item}>
 					<Link href="/#home">
-						<a className={styles.nav_link}>
+						<a className={styles.nav_link} arial-label="Go to Home Section">
 							<FaHome className="w-12 h-14" />
 							<span className={styles.link_text}>Home</span>
 						</a>
@@ -54,7 +51,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				</li>
 
 				<li className={styles.nav_item}>
-					<Link href="/#about">
+					<Link href="/#about" arial-label="Go to about section">
 						<a className={styles.nav_link}>
 							<FaUserAlt className="w-10 h-6" />
 							<span className={styles.link_text}>About</span>
@@ -63,7 +60,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				</li>
 
 				<li className={styles.nav_item}>
-					<Link href="/#projects">
+					<Link href="/#projects" arial-label="Go to projects section">
 						<a className={styles.nav_link}>
 							<FaFolder className="w-8 h-12" />
 							<span className={styles.link_text}>Projects</span>
@@ -72,7 +69,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				</li>
 
 				<li className={styles.nav_item}>
-					<Link href="/#contact">
+					<Link href="/#contact" arial-label="Go to contact section">
 						<a className={styles.nav_link}>
 							<FaMobile className="w-12 h-7" />
 							<span className={styles.link_text}>Contact</span>
@@ -81,7 +78,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				</li>
 				<li className={styles.nav_item}>
 					<Link href="/api/resume">
-						<a className={styles.nav_link}>
+						<a className={styles.nav_link} arial-label="download resume">
 							<FaFile className="w-10 h-7" />
 							<span className={styles.link_text}>Download CV</span>
 						</a>
@@ -89,7 +86,10 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 				</li>
 
 				<li className={styles.nav_item}>
-					<button className={styles.nav_link} onClick={handleChange}>
+					<button
+						className={styles.nav_link}
+						onClick={handleChange}
+						aria-label="change theme between light and dark">
 						{isDark ? (
 							<svg
 								className="theme-icon svg-inline--fa fa-moon-stars fa-w-16 fa-7x"
