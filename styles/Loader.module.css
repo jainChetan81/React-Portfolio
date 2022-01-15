@@ -29,6 +29,13 @@
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.matrix {
+	overflow: hidden;
+}
+.matrix canvas {
+	position: absolute;
+	inset: 0;
+}
 @keyframes flip {
 	50% {
 		transform: rotateX(180deg);

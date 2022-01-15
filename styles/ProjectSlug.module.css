@@ -97,10 +97,15 @@
 	font-size: 1rem;
 	margin-block: 0.5rem;
 }
+.markdown pre {
+	overflow: auto;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
+	scrollbar-width: thin;
+}
 .markdown code {
 	background-color: var(--bg-primary);
 	color: var(--text-primary);
-	padding: 1rem;
+	padding: 1rem 0.5rem;
 	border-radius: 5px;
 	display: inline-block;
 	font-weight: 500;

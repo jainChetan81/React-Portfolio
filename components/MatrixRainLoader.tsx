@@ -1,6 +1,5 @@
-import Head from "next/head";
-import styles from "../styles/Loader.module.css";
 import { FC, useEffect, useRef } from "react";
+import styles from "../styles/Loader.module.css";
 class SymbolCanvas {
 	characters: string;
 	fontSize: number;
@@ -65,13 +64,16 @@ const MatrixRainLoader: FC = () => {
 
 		const effect: Effect = new Effect(canvas.width, canvas.height);
 		let lastTime: number = 0;
-		const fps: number = 90;
+		const fps: number = 120;
 		const nextFrame: number = 1000 / fps;
 		let timer: number = 0;
 		const animate = (timeStamp: number) => {
 			const deltaTime: number = timeStamp - lastTime;
 			lastTime = timeStamp;
-			if (timer > nextFrame) {
+			if (timeStamp > 4000) {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+			}
+			if (timer > nextFrame && timeStamp < 4000) {
 				ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 				ctx.textAlign = "center";
 				ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -100,15 +102,9 @@ const MatrixRainLoader: FC = () => {
 	}, []);
 
 	return (
-		<>
-			<Head>
-				<title>Loading...</title>
-				<link rel="manifest" href="manifest.json" />
-			</Head>
-			<div className={styles.matrix + " " + styles.loader}>
-				<canvas ref={ref}></canvas>
-			</div>
-		</>
+		<div className={styles.matrix}>
+			<canvas ref={ref} id="canvas"></canvas>
+		</div>
 	);
 };
 
