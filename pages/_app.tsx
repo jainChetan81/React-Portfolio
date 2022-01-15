@@ -4,7 +4,7 @@ import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Loader } from "../components";
+import { Loader, MatrixRainLoader } from "../components";
 import * as ga from "../libs/google_analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
 				}}
 			/>
-			{loading ? <Loader /> : <Component {...pageProps} />}
+			{loading ? <MatrixRainLoader /> : <Component {...pageProps} />}
 		</>
 	);
 }
