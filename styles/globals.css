@@ -7,16 +7,15 @@
 	--transition-speed: 0.5s;
 	scroll-padding-top: 50px;
 	scrollbar-width: thin;
-	scrollbar-color: var(--font-color-link) #1e1e24;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
 	--transition: transform 200ms cubic-bezier(0.21, 1.06, 0.81, 1);
 	--br: 0.5em;
 	--pink: #e31f71;
 	--black: #212121;
-	--green: #23ce6b;
 	--blue: #016fb9;
 	--clr-light: rgb(255, 255, 255);
 	--clr-secondary: rgb(0, 66, 199);
-	--font-color-link: #007deb;
+	--icon-color-matrix: #0affa0;
 }
 
 div.body.dark {
@@ -46,7 +45,7 @@ body {
 	font-size: 1rem;
 	-webkit-font-smoothing: antialiased;
 	scrollbar-width: thin;
-	scrollbar-color: var(--font-color-link) #1e1e24;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
 }
 .not-found {
 	height: calc(100vh - 150px);
@@ -70,7 +69,7 @@ body::-webkit-scrollbar-track {
 	background-color: #1e1e24;
 }
 body::-webkit-scrollbar-thumb {
-	background-color: var(--font-color-link);
+	background-color: var(--icon-color-matrix);
 }
 section {
 	margin-top: 100px;
@@ -99,18 +98,7 @@ section {
 		padding: 0 2rem;
 	}
 }
-.fa-primary {
-	color: #ff7eee;
-}
 
-.fa-secondary {
-	color: #df49a6;
-}
-
-.fa-primary,
-.fa-secondary {
-	transition: var(--transition-speed);
-}
 .theme_icon {
 	display: none;
 }

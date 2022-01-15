@@ -36,15 +36,15 @@
 }
 .project .pagination a h2 {
 	color: var(--bg-main);
-	text-shadow: -1px 0 var(--font-color-link), 0 1px var(--font-color-link), 1px 0 var(--font-color-link),
-		0 -1px var(--font-color-link);
+	text-shadow: -1px 0 var(--icon-color-matrix), 0 1px var(--icon-color-matrix), 1px 0 var(--icon-color-matrix),
+		0 -1px var(--icon-color-matrix);
 }
 .project .pagination a * {
 	transition: all ease-in-out 0.25s;
 }
 .project .pagination a:hover h2,
 .project .pagination a:hover svg {
-	color: var(--font-color-link);
+	color: var(--icon-color-matrix);
 	text-shadow: none;
 }
 .project .pagination a:hover p {
@@ -120,7 +120,7 @@
 	overflow: hidden;
 	overflow-x: scroll;
 	display: flex;
-	scrollbar-color: var(--font-color-link) #1e1e24;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
 	scrollbar-width: thin;
 }
 @media screen and (max-width: 600px) {
@@ -145,7 +145,7 @@
 	background-color: #1e1e24;
 }
 .image_container::-webkit-scrollbar-thumb {
-	background-color: var(--font-color-link);
+	background-color: var(--icon-color-matrix);
 }
 
 @media screen and (min-width: 1000px) {

@@ -22,7 +22,7 @@ footer.footer .logo {
 	color: var(--text-primary);
 }
 footer.footer .logo::first-letter {
-	color: var(--green);
+	color: var(--icon-color-matrix);
 }
 footer.footer p {
 	letter-spacing: 2px;
@@ -40,10 +40,15 @@ footer.footer .social_media {
 	justify-content: space-between;
 	gap: 10px;
 }
-footer.footer .social_media img,
-footer.footer .social_media span {
-	font-size: 30px;
-	width: 30px;
+footer.footer .social_media a {
+	color: var(--text-primary);
+	border-bottom: 1px solid var(--icon-color-matrix);
+	transition: scale ease-in-out 0.2s;
+}
+footer.footer .social_media a:hover {
+	color: var(--text-primary);
+	scale: 1.5;
+	border-bottom: none;
 }
 @keyframes spinning {
 	0% {

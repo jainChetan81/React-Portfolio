@@ -56,12 +56,12 @@ section.about .hard_ability img {
 }
 section.about h2 {
 	margin-bottom: 20px;
-	border-bottom: 2px solid var(--blue);
+	border-bottom: 2px solid var(--icon-color-matrix);
 	font-size: 40px;
 }
 section.about h3 {
 	margin-top: 20px;
-	color: var(--green);
+	color: var(--icon-color-matrix);
 }
 section.about p {
 	font-size: 18px;

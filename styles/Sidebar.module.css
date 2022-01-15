@@ -45,7 +45,7 @@
 	color: var(--text-secondary);
 }
 .nav_link:hover svg {
-	color: #df49a6;
+	color: var(--icon-color-matrix);
 }
 
 .link_text {
@@ -80,7 +80,7 @@
 	font-size: 30px;
 }
 .logo_text::first-letter {
-	color: var(--green);
+	color: var(--icon-color-matrix);
 }
 
 .navbar:hover .logo svg {

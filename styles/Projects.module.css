@@ -3,7 +3,7 @@ section.projects .projects_container > h2 {
 	font-size: 40px;
 	margin-bottom: 10px;
 	margin-bottom: 20px;
-	border-bottom: 2px solid var(--blue);
+	border-bottom: 2px solid var(--icon-color-matrix);
 }
 section.projects {
 	padding-top: 100px;
@@ -90,11 +90,11 @@ section.projects .projects_container .project p {
 }
 section.projects .projects_container .project p a {
 	color: #fff;
-	border-bottom: 1px solid var(--green);
+	border-bottom: 1px solid var(--icon-color-matrix);
 	transition: color 0.25s;
 }
 section.projects .projects_container .project p a:hover {
-	color: var(--green);
+	color: var(--icon-color-matrix);
 }
 section.projects .projects_container .project footer {
 	margin-top: auto;
@@ -183,7 +183,7 @@ section.projects .projects_container .project footer .tech_list {
 	transition: all ease-in-out 0.2s;
 }
 .front .links a:hover svg {
-	color: #df49a6;
+	color: var(--icon-color-matrix);
 	transform: scale(1.2);
 }
 .back {
