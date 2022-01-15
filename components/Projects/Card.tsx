@@ -51,11 +51,11 @@ const Card: FC<Props> = ({
 				/>
 				<h2 className={styles.name}>{name}</h2>
 				<p className={styles.links}>
-					<a href={githubUrl} target="_blank" rel="noreferrer">
+					<a href={githubUrl} target="_blank" rel="noreferrer" aria-label={`github url of ${name}`}>
 						<FaGithub />
 					</a>
 					{externalUrl && (
-						<a href={externalUrl} target="_blank" rel="noreferrer">
+						<a href={externalUrl} target="_blank" rel="noreferrer" aria-label={`hosted url of ${name}`}>
 							<FaExternalLinkAlt />
 						</a>
 					)}
@@ -65,7 +65,7 @@ const Card: FC<Props> = ({
 				<div className={styles.streaming_info}>
 					<p className={styles.game_stat}>{summary}</p>
 				</div>
-				<Link href={`/projects/${slug}`}>
+				<Link href={`/projects/${slug}`} aria-label={`Descripton of ${name}`}>
 					<a itemProp="author" className={styles.btn}>
 						Read More
 					</a>

@@ -29,9 +29,9 @@ const Hero: FC = () => {
 			<div className={styles.hero_image}>
 				<ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
 					<Image
-						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/research`}
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/research?tr=w-500,h-550`}
 						width={500}
-						height={450}
+						height={550}
 						alt="Chetan Jain"
 					/>
 				</ScrollAnimation>
