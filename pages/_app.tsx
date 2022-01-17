@@ -71,8 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
 				}}
 			/>
-			{/* {loading ? <Loader /> : <div>{display ? <MatrixRainLoader /> : <Component {...pageProps} />}</div>}; */}
-			{loading ? <Loader /> : <Component {...pageProps} />};
+			{loading ? <Loader /> : <Component {...pageProps} />}
 		</>
 	);
 }
