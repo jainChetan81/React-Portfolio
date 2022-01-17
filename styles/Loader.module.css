@@ -4,7 +4,6 @@
 	overflow: hidden;
 	position: relative;
 	background-color: #000;
-	overflow: hidden;
 	color: #fff;
 	display: flex;
 	justify-content: center;
@@ -29,13 +28,6 @@
 	background: -webkit-linear-gradient(135deg, #da1515, #363232, #2323e4);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
-.matrix {
-	overflow: hidden;
-}
-.matrix canvas {
-	position: absolute;
-	inset: 0;
 }
 @keyframes flip {
 	50% {
