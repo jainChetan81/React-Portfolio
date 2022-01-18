@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { FC } from "react";
+import type { FC, MutableRefObject } from "react";
 import { FaExternalLinkAlt, FaGithub, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import styles from "../../styles/ProjectSlug.module.css";
 import type { Project } from "../../@types";
 import { Layout } from "../../components";
 import { NetworkDetector } from "../../hoc";
+import { useHorizontalScroll } from "../../hooks";
 
 type Props = {
 	previousProject: Project;
@@ -15,6 +16,7 @@ type Props = {
 	notFound?: boolean;
 };
 const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) => {
+	const scrollRef: MutableRefObject<HTMLDivElement | null> = useHorizontalScroll();
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -67,7 +69,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 					<ReactMarkdown>{project.description}</ReactMarkdown>
 				</div>
 				{project.sliderImages?.length > 0 && (
-					<div className={styles.image_container}>
+					<div ref={scrollRef} className={styles.image_container}>
 						{project.sliderImages?.map((image, i) => (
 							<figure key={image.name + i}>
 								<Image src={`${image.url}?tr=h-600,w=1000`} alt="first" width={1000} height={600} />
@@ -75,13 +77,12 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 						))}
 					</div>
 				)}
-
 				<div
 					className={`${styles.pagination} flex md:flex-row flex-col items-center justify-between sm:items-start mt-10`}>
-					{previousProject.slug && (
+					{previousProject.slug ? (
 						<Link href={`/projects/${previousProject.slug}`}>
 							<a
-								className="flex items-start cursor-pointer w-full text-left justify-end float-left"
+								className="flex items-start cursor-pointer w-full sm:w-6/12 text-left justify-end float-left"
 								aria-label="Previous Project">
 								<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
 								<aside>
@@ -90,11 +91,13 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 								</aside>
 							</a>
 						</Link>
+					) : (
+						<div />
 					)}
 					{nextProject.slug && (
 						<Link href={`/projects/${nextProject.slug}`}>
 							<a
-								className="flex items-start cursor-pointer w-full text-right justify-end float-right"
+								className="flex items-start cursor-pointer  w-full md:w-6/12 text-right justify-end float-right"
 								aria-label="Next Project">
 								<aside>
 									<h2 className="font-bold text-2xl uppercase">NEXT</h2>
