@@ -119,11 +119,11 @@
 }
 .image_container {
 	width: 100%;
-	/* height: 600px; */
-	/* scroll-snap-type: x mandatory;
-	-webkit-overflow-scrolling: touch; Needed to work on iOS Safari */
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	/* Needed to work on iOS Safari */
 	overflow: hidden;
-	/* overflow-x: scroll; */
+	overflow-x: scroll;
 	display: flex;
 	scrollbar-color: var(--icon-color-matrix) #1e1e24;
 	scrollbar-width: thin;
@@ -153,9 +153,9 @@
 	background-color: var(--icon-color-matrix);
 }
 
-/* @media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	.image_container figure {
 		scroll-margin-left: 100px;
 		width: calc(100% - 100px);
 	}
-} */
+}

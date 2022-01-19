@@ -7,8 +7,7 @@ class MyDocument extends Document {
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
 					<link
-						rel="preload"
-						as="style"
+						rel="stylesheet"
 						href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
 					/>
 					<link rel="apple-touch-icon" href="/oo" />
