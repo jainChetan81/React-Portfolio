@@ -64,7 +64,7 @@ const About: FC = () => {
 							<ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
 								<Image
 									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${ability}?tr=w-34,h-34,r-20`}
-									alt="React Icon"
+									alt={ability + " Icon"}
 									height={34}
 									width={34}
 								/>

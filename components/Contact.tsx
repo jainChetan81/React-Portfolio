@@ -35,20 +35,24 @@ const Contact: FC = () => {
 				<div className={styles.contact_info}>
 					<Image
 						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/email-icon.svg?tr=w-40,h-40`}
-						alt="Email"
+						alt="Email icon"
 						width={40}
 						height={40}
 					/>
-					<a href="jain.cj.chetan@gmail.com">jain.cj.chetan@gmail.com</a>
+					<a className={styles.reverse} rel="nofollow" href="mailto:jain.cj.chetan@gmail.com">
+						moc.liamg@natehc.jc.niaj
+					</a>
 				</div>
 				<div className={styles.contact_info}>
 					<Image
 						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/phone-icon.svg?tr=w-40,h-40`}
-						alt="Phone"
+						alt="Phone icon"
 						width={40}
 						height={40}
 					/>
-					<a href="tel:+5531981213843">(+91) 87007-76723</a>
+					<a rel="nofollow" href="mailto:+8700776723">
+						32767-70078 (19+)
+					</a>
 				</div>
 			</div>
 			<p>If you have seen my potential or want to talk to me, do not hesitate to send me a message.</p>

@@ -49,7 +49,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 							className="opacity-90 hover:opacity-100 "
 							href={project.githubUrl}
 							target="_blank"
-							rel="noreferrer"
+							rel="noreferrer nofollow"
 							aria-label="Github link to Project">
 							<FaGithub className="w-6 h-6 mt-2" />
 						</a>
@@ -58,7 +58,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 								className="opacity-90 hover:opacity-100 "
 								href={project.externalUrl}
 								target="_blank"
-								rel="noreferrer"
+								rel="noreferrer nofollow"
 								aria-label="Hosted link to Project">
 								<FaExternalLinkAlt className="w-8 h-8 pt-2.5" />
 							</a>
@@ -72,7 +72,12 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 					<div ref={scrollRef} className={styles.image_container}>
 						{project.sliderImages?.map((image, i) => (
 							<figure key={image.name + i}>
-								<Image src={`${image.url}?tr=h-600,w=1000`} alt="first" width={1000} height={600} />
+								<Image
+									src={`${image.url}?tr=h-600,w=1000`}
+									alt={"slider" + image.name}
+									width={1000}
+									height={600}
+								/>
 							</figure>
 						))}
 					</div>

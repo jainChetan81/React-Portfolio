@@ -51,11 +51,15 @@ const Card: FC<Props> = ({
 				/>
 				<h2 className={styles.name}>{name}</h2>
 				<p className={styles.links}>
-					<a href={githubUrl} target="_blank" rel="noreferrer" aria-label={`github url of ${name}`}>
+					<a href={githubUrl} target="_blank" rel="noreferrer nofollow" aria-label={`github url of ${name}`}>
 						<FaGithub />
 					</a>
 					{externalUrl && (
-						<a href={externalUrl} target="_blank" rel="noreferrer" aria-label={`hosted url of ${name}`}>
+						<a
+							href={externalUrl}
+							target="_blank"
+							rel="noreferrer nofollow"
+							aria-label={`hosted url of ${name}`}>
 							<FaExternalLinkAlt />
 						</a>
 					)}

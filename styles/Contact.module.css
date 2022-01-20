@@ -79,6 +79,10 @@ section.contact .contacts .contact_info a {
 	color: #000;
 	font-weight: 500;
 }
+section.contact .contacts .contact_info a[href^="mailto"] {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
 section.contact .contacts .contact_info:hover {
 	background-color: var(--pink);
 }

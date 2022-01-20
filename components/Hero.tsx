@@ -32,7 +32,7 @@ const Hero: FC = () => {
 						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/research?tr=w-500,h-550`}
 						width={500}
 						height={550}
-						alt="Chetan Jain"
+						alt="Chetan Jain Hero"
 					/>
 				</ScrollAnimation>
 			</div>

@@ -28,25 +28,25 @@ const Footer: FC = () => {
 
 			<div className={styles.social_media}>
 				<Link href="/linkedin">
-					<a target="_blank" rel="noreferrer" aria-label="Chetan Jain LinkedIn Profile">
+					<a target="_blank" rel="noreferrer nofollow " aria-label="Chetan Jain LinkedIn Profile">
 						<FaLinkedin className="h-10 w-10 text-blue-600" />
 					</a>
 				</Link>
 
 				<Link href="/github">
-					<a target="_blank" rel="noreferrer" aria-label="Chetan Jain Github Profile">
+					<a target="_blank" rel="noreferrer nofollow" aria-label="Chetan Jain Github Profile">
 						<FaGithubSquare className="h-10 w-10 text-white" />
 					</a>
 				</Link>
 
 				<Link href="/twitter">
-					<a target="_blank" rel="noreferrer" aria-label="Chetan Jain Twitter Profile">
+					<a target="_blank" rel="noreferrer nofollow" aria-label="Chetan Jain Twitter Profile">
 						<FaTwitter className="h-10 w-10 text-blue-400" />
 					</a>
 				</Link>
 
 				<Link href="/stackoverflow">
-					<a target="_blank" rel="noreferrer" aria-label="Chetan Jain Stack Overflow Profile">
+					<a target="_blank" rel="noreferrer nofollow" aria-label="Chetan Jain Stack Overflow Profile">
 						<FaStackOverflow className="h-10 w-10 text-orange-600" />
 					</a>
 				</Link>
