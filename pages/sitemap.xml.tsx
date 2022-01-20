@@ -7,7 +7,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
-	const BASE_URL = process.env.URL;
+	const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 	const staticPaths = fs
 		.readdirSync("pages")
 		.filter((staticPage) => {
