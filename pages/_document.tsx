@@ -6,11 +6,6 @@ class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					<link rel="manifest" href="/manifest.json" />
-					<link
-						rel="stylesheet"
-						href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-					/>
-					<link rel="apple-touch-icon" href="/oo" />
 					<meta name="theme-color" content="#ffffff" />
 					<meta name="msapplication-TileColor" content="#2B5797" />
 					<meta name="msapplication-tap-highlight" content="no" />
@@ -33,7 +28,7 @@ class MyDocument extends Document {
 					/>
 					<meta name="twitter:image" content="https://ik.imagekit.io/clhowstalgz/chetan?tr=w-200,h-200" />
 					<meta name="twitter:creator" content="@jainChetan81" />
-					<meta property="og:type" content="website" />
+					<meta property="og:type" content="portfolio website" />
 					<meta property="og:title" content="Portfolio - Chetan Jain" />
 					<meta
 						property="og:description"

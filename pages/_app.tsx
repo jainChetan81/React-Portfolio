@@ -1,16 +1,16 @@
 import "../styles/globals.css";
 import "../styles/normalize.css";
+import "../styles/animated.css";
 import Script from "next/script";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Loader, MatrixRainLoader } from "../components";
+import { Loader } from "../components";
 import * as ga from "../libs/google_analytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	const [loading, setLoading] = useState<boolean>(false);
-	// const [display, setDisplay] = useState<boolean>(false);
 	useEffect(() => {
 		const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
 			//if the url is external or regarding api's dont't track or show the loader
@@ -42,12 +42,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 			router.events.off("routeChangeError", handleRouteChangeError);
 		};
 	});
-	// useEffect(() => {
-	// 	setDisplay(true);
-	// 	setTimeout(() => {
-	// 		setDisplay(false);
-	// 	}, 3000);
-	// }, []);
 
 	return (
 		<>

@@ -34,7 +34,7 @@
 .url a:nth-last-of-type(1) {
 	border-left: 1px solid var(--text-primary);
 }
-.project .pagination a h2 {
+.project .pagination a h4 {
 	color: var(--bg-main);
 	text-shadow: -1px 0 var(--icon-color-matrix), 0 1px var(--icon-color-matrix), 1px 0 var(--icon-color-matrix),
 		0 -1px var(--icon-color-matrix);
@@ -42,7 +42,7 @@
 .project .pagination a * {
 	transition: all ease-in-out 0.25s;
 }
-.project .pagination a:hover h2,
+.project .pagination a:hover h4,
 .project .pagination a:hover svg {
 	color: var(--icon-color-matrix);
 	text-shadow: none;

@@ -12,11 +12,11 @@ const Hero: FC = () => {
 					<h1>Chetan Jain</h1>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-					<h3>Full Stack Developer</h3>
+					<h4>Full Stack Developer</h4>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
 					<p className={styles.small_resume}>
-						I am a computer technician with a focus on web development with JavaScript.
+						I am a Full stack developer with a focus on web and hybrid Mobile Application.
 					</p>
 				</ScrollAnimation>
 
@@ -29,7 +29,7 @@ const Hero: FC = () => {
 			<div className={styles.hero_image}>
 				<ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
 					<Image
-						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/research?tr=w-500,h-550`}
+						src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/research?tr=f-png,w-500,h-550`}
 						width={500}
 						height={550}
 						alt="Chetan Jain Hero"

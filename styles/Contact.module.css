@@ -79,7 +79,8 @@ section.contact .contacts .contact_info a {
 	color: #000;
 	font-weight: 500;
 }
-section.contact .contacts .contact_info a[href^="mailto"] {
+section.contact .contacts .contact_info a[href^="mailto"],
+section.contact .contacts .contact_info a[href^="tel"] {
 	unicode-bidi: bidi-override;
 	direction: rtl;
 }

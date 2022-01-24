@@ -39,7 +39,7 @@ const Contact: FC = () => {
 						width={40}
 						height={40}
 					/>
-					<a className={styles.reverse} rel="nofollow" href="mailto:jain.cj.chetan@gmail.com">
+					<a rel="nofollow" href="mailto:jain.cj.chetan@gmail.com">
 						moc.liamg@natehc.jc.niaj
 					</a>
 				</div>
@@ -50,7 +50,7 @@ const Contact: FC = () => {
 						width={40}
 						height={40}
 					/>
-					<a rel="nofollow" href="mailto:+8700776723">
+					<a rel="nofollow" href="tel:+8700776723">
 						32767-70078 (19+)
 					</a>
 				</div>

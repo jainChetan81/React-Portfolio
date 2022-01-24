@@ -24,6 +24,7 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 				<meta name="keywords" content={keywords} />
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 				<meta charSet="utf-8" />
+				<meta name="author" content="Chetan Jain" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="manifest" href="manifest.json" />
 			</Head>
@@ -48,8 +49,9 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 	);
 };
 Layout.defaultProps = {
-	description: "A Portfolio of Chetan Jain to showcase various skills and projects",
-	keywords: "[NextJS, Tailwind, Typescript, Strapi, PWA, PostCss]",
+	description:
+		"A Portfolio made with React using ISR by Chetan Jain to showcase his incredible skills in full stack development and projects",
+	keywords: "NextJS, React, Tailwind, Typescript, Strapi, PWA, PostCss",
 };
 Layout.propTypes = {
 	title: PropTypes.string.isRequired,

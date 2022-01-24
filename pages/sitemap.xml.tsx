@@ -7,20 +7,21 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
-	const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-	const staticPaths = fs
-		.readdirSync("pages")
-		.filter((staticPage) => {
-			return !["api", "_app.js", "_document.js", "404.js", "sitemap.xml.js"].includes(staticPage);
-		})
-		.map((staticPagePath) => {
-			return `${BASE_URL}/${staticPagePath}`;
-		});
+	const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://thechetanjain.in";
+	// const staticPaths: string[] = fs
+	// 	.readdirSync("pages")
+	// 	.filter((staticPage) => {
+	// 		return !["api", "_app", "_document", "404", "sitemap.xml"].includes(staticPage);
+	// 	})
+	// 	.map((staticPagePath) => {
+	// 		return `${BASE_URL}/${staticPagePath}`;
+	// 	});
+	const staticPaths: string[] = [`${BASE_URL}/`];
 
 	const response: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?_sort=rank:ASC`);
 	const projects: Project[] = await response.json();
 
-	const dynamicPaths = projects.map((singleProduct: Project) => {
+	const dynamicPaths: string[] = projects.map((singleProduct: Project) => {
 		return `${BASE_URL}/product/${singleProduct.slug}`;
 	});
 

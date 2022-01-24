@@ -25,8 +25,18 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 		const year = dateObj.getFullYear();
 		return `${month} ${day}, ${year}`;
 	};
+	const getKeywords = (): string[] => {
+		const keywords: string[] = [project.name];
+		project.technologies.forEach((technology) => {
+			keywords.push(technology.name);
+		});
+		return keywords;
+	};
 	return (
-		<Layout title={`${project.name} | Chetan Jain`}>
+		<Layout
+			title={`${project.name} | Chetan Jain`}
+			keywords={getKeywords().join(",")}
+			description={project.summary}>
 			<section className={styles.project}>
 				<h1 className="text-center pb-10 capitalize text-5xl">{project.name}</h1>
 				<div className="flex flex-col sm:flex-row justify-between gap-10 items-center">
@@ -91,7 +101,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 								aria-label="Previous Project">
 								<FaLongArrowAltLeft className="w-32 h-20 mr-5" />
 								<aside>
-									<h2 className="font-bold text-2xl uppercase">Previous</h2>
+									<h4 className="font-bold text-2xl uppercase">Previous</h4>
 									<p className="break-words opacity-40">{previousProject.summary}</p>
 								</aside>
 							</a>
@@ -105,7 +115,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 								className="flex items-start cursor-pointer  w-full md:w-6/12 text-right justify-end float-right"
 								aria-label="Next Project">
 								<aside>
-									<h2 className="font-bold text-2xl uppercase">NEXT</h2>
+									<h4 className="font-bold text-2xl uppercase">NEXT</h4>
 									<p className=" opacity-40">{nextProject.summary}</p>
 								</aside>
 								<FaLongArrowAltRight className="w-32 h-20 ml-5" />

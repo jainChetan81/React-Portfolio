@@ -49,7 +49,7 @@ const Card: FC<Props> = ({
 					width={250}
 					alt={`${name} thumbnail`}
 				/>
-				<h2 className={styles.name}>{name}</h2>
+				<h3 className={styles.name}>{name}</h3>
 				<p className={styles.links}>
 					<a href={githubUrl} target="_blank" rel="noreferrer nofollow" aria-label={`github url of ${name}`}>
 						<FaGithub />

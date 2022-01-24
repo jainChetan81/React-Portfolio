@@ -12,7 +12,7 @@ section.hero .hero_text > p {
 section.hero .hero_text h1 {
 	font-size: 70px;
 }
-section.hero .hero_text h3 {
+section.hero .hero_text h4 {
 	color: var(--icon-color-matrix);
 	margin: 1rem 0;
 }
@@ -35,6 +35,7 @@ section.hero .button:hover {
 }
 section.hero .hero_image img {
 	max-width: 500px;
+	aspect-ratio: 10/9;
 }
 @media (max-width: 960px) {
 	section.hero {

@@ -55,7 +55,7 @@ const Modal: FC<Props> = ({ show, onClose, children, title, type }) => {
 						{getIcon(type)}
 					</button>
 				</div>
-				{title && <h2 className={styles.title}>{title}</h2>}
+				{title && <h3 className={styles.title}>{title}</h3>}
 				{children && <div className={styles.body}>{children}</div>}
 			</div>
 		</div>

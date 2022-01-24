@@ -16,13 +16,8 @@ const About: FC = () => {
 		"tailwindcss",
 		"redux",
 		"sass",
-		"cypress",
 		"jest",
 		"mongodb",
-		"pwa",
-		"firebase",
-		"strapi",
-		"bootstrap",
 	];
 	return (
 		<section className={styles.about} id="about">
