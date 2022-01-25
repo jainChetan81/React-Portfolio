@@ -50,8 +50,8 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
 };
 Layout.defaultProps = {
 	description:
-		"A Portfolio made with React using ISR by Chetan Jain to showcase his incredible skills in full stack development and projects",
-	keywords: "NextJS, React, Tailwind, Typescript, Strapi, PWA, PostCss",
+		"A Portfolio made with React using ISR by Chetan Jain to showcase his incredible Full Stack Development skills in full stack development and projects",
+	keywords: "NextJS, React, Tailwind, Typescript, Strapi, PWA, PostCss, Javascript",
 };
 Layout.propTypes = {
 	title: PropTypes.string.isRequired,
