@@ -7,7 +7,6 @@ import styles from "../../styles/ProjectSlug.module.css";
 import type { Project } from "../../@types";
 import { Layout } from "../../components";
 import { NetworkDetector } from "../../hoc";
-import { useHorizontalScroll } from "../../hooks";
 
 type Props = {
 	previousProject: Project;
@@ -16,7 +15,6 @@ type Props = {
 	notFound?: boolean;
 };
 const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) => {
-	const scrollRef: MutableRefObject<HTMLDivElement | null> = useHorizontalScroll();
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -79,7 +77,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 					<ReactMarkdown>{project.description}</ReactMarkdown>
 				</div>
 				{project.sliderImages?.length > 0 && (
-					<div ref={scrollRef} className={styles.image_container}>
+					<div className={styles.image_container}>
 						{project.sliderImages?.map((image, i) => (
 							<figure key={image.name + i}>
 								<Image

@@ -10,11 +10,12 @@ section.hero .hero_text > p {
 	font-size: 1rem;
 }
 section.hero .hero_text h1 {
-	font-size: 70px;
+	font-size: clamp(2.5rem, 4vw + 2rem, 5rem);
 }
-section.hero .hero_text h4 {
+section.hero .hero_text h2 {
+	font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
 	color: var(--icon-color-matrix);
-	margin: 1rem 0;
+	margin: 0.5rem 0;
 }
 section.hero .hero_text p.small_resume {
 	margin-bottom: 5rem;
@@ -41,9 +42,6 @@ section.hero .hero_image img {
 	section.hero {
 		display: block;
 	}
-	section.hero .hero_text h1 {
-		font-size: 5rem;
-	}
 	section.hero .hero_image {
 		display: none;
 	}
@@ -56,6 +54,6 @@ section.hero .hero_image img {
 }
 @media (max-width: 480px) {
 	section.hero {
-		padding-top: 15%;
+		padding-top: 36%;
 	}
 }

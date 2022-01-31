@@ -42,8 +42,8 @@ footer.footer .social_media {
 }
 footer.footer .social_media a {
 	color: var(--text-primary);
-	border-bottom: 1px solid var(--icon-color-matrix);
-	transition: scale ease-in-out 0.2s;
+	border-bottom: 4px solid #5a5656;
+	transition: transform ease-in-out 0.3s, border-bottom ease-in-out 0.3s;
 }
 footer.footer .social_media a:hover {
 	color: var(--text-primary);

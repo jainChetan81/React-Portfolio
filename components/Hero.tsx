@@ -12,7 +12,7 @@ const Hero: FC = () => {
 					<h1>Chetan Jain</h1>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-					<h4>Full Stack Developer</h4>
+					<h2>Full Stack Developer</h2>
 				</ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
 					<p className={styles.small_resume}>

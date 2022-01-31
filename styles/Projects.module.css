@@ -27,6 +27,9 @@ section.projects::before {
 	section.projects {
 		padding-top: 0;
 	}
+	section.projects .projects_container {
+		padding-top: 0;
+	}
 	section.projects::before {
 		content: none;
 	}

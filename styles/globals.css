@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: var(--icon-color-matrix);
 }
 section {
-	margin-top: 100px;
+	margin-top: 40px;
 	min-height: calc(100vh - 250px);
 	position: relative;
 }
