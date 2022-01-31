@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, MutableRefObject, useEffect, useRef } from "react";
 import Typed from "typed.js";
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
 };
 
 const TypedHeading: FC<Props> = ({ text }) => {
-	const el = useRef(null);
+	const el: MutableRefObject<any> = useRef(null);
 	useEffect(() => {
 		const options = {
 			strings: [...text],
@@ -16,7 +16,7 @@ const TypedHeading: FC<Props> = ({ text }) => {
 			loop: true,
 			loopCount: Infinity,
 		}; // elRef refers to the <span> rendered below
-		const animation = new Typed(el.current, options);
+		const animation: Typed = new Typed(el.current, options);
 		animation.start();
 
 		return () => {
