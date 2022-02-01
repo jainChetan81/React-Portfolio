@@ -3,16 +3,14 @@ import type { Project } from "../@types";
 import { About, Contact, Hero, Layout, Projects } from "../components";
 import { NetworkDetector } from "../hoc";
 
-const Home: NextPage<{ projects: Project[] }> = ({ projects }) => {
-	return (
-		<Layout title="Portfolio - Chetan Jain">
-			<Hero />
-			<About />
-			<Projects projects={projects} />
-			<Contact />
-		</Layout>
-	);
-};
+const Home: NextPage<{ projects: Project[] }> = ({ projects }) => (
+	<Layout title="Portfolio - Chetan Jain">
+		<Hero />
+		<About />
+		<Projects projects={projects} />
+		<Contact />
+	</Layout>
+);
 
 export default NetworkDetector(Home);
 export async function getStaticProps() {

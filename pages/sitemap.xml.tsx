@@ -1,10 +1,7 @@
 import { NextApiResponse } from "next";
-import * as fs from "fs";
 import { Project } from "../@types";
 
-const Sitemap = () => {
-	return null;
-};
+const Sitemap = () => null;
 
 export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://thechetanjain.in";
@@ -21,25 +18,25 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	const response: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?_sort=rank:ASC`);
 	const projects: Project[] = await response.json();
 
-	const dynamicPaths: string[] = projects.map((singleProduct: Project) => {
-		return `${BASE_URL}/product/${singleProduct.slug}`;
-	});
+	const dynamicPaths: string[] = projects.map(
+		(singleProduct: Project) => `${BASE_URL}/product/${singleProduct.slug}`
+	);
 
 	const allPaths = [...staticPaths, ...dynamicPaths];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${allPaths
-			.map((url) => {
-				return `
+			.map(
+				(url) => `
             <url>
               <loc>${url}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>1.0</priority>
             </url>
-          `;
-			})
+          `
+			)
 			.join("")}
     </urlset>
 `;

@@ -1,10 +1,10 @@
-import type { FC } from "react";
+import type { Dispatch, FC, SetStateAction } from "react";
 import Link from "next/link";
 import styles from "../styles/Sidebar.module.css";
 import { FaHome, FaUserAlt, FaFolder, FaMobile, FaFile } from "react-icons/fa";
 type Props = {
 	isDark: boolean;
-	setIsDark: (isDark: boolean) => void;
+	setIsDark: Dispatch<SetStateAction<boolean>>;
 };
 const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 	const handleChange = () => {

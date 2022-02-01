@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 		const handleRouteChange = (url: string, { shallow }: { shallow: boolean }) => {
 			//if the url is external or regarding api's dont't track or show the loader
 			if (!shallow && !url.includes("api")) {
-				url !== router.pathname ? setLoading(true) : setLoading(false);
+				if (url !== router.pathname) setLoading(true);
+				else setLoading(false);
 				ga.pageview(url);
 			}
 		};
