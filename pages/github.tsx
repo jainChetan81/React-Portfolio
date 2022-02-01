@@ -1,6 +1,4 @@
-const Github = () => {
-	return <div></div>;
-};
+const Github = () => <div></div>;
 
 export default Github;
 export async function getServerSideProps() {

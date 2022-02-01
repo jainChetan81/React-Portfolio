@@ -1,6 +1,4 @@
-const Twitter = () => {
-	return <div></div>;
-};
+const Twitter = () => <div></div>;
 
 export default Twitter;
 export async function getServerSideProps() {

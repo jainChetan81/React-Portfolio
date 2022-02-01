@@ -1,6 +1,4 @@
-const StackOverflow = () => {
-	return <div></div>;
-};
+const StackOverflow = () => <div></div>;
 
 export default StackOverflow;
 

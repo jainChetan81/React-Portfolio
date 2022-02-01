@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { FC, MutableRefObject } from "react";
+import type { FC } from "react";
 import { FaExternalLinkAlt, FaGithub, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import styles from "../../styles/ProjectSlug.module.css";
@@ -138,6 +138,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }: any) {
 	const res = await fetch(`${process.env.BASE_API}/portfolio-projects?slug=${slug}`);
+	const errors: string[] = [];
 	const project = await res.json();
 	if (!project || project[0].slug !== slug) {
 		return {
@@ -149,14 +150,14 @@ export async function getStaticProps({ params: { slug } }: any) {
 	try {
 		const prevRes: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank - 1}`);
 		previousProject = prevRes ? await prevRes.json() : [];
-	} catch (error) {
-		console.error(`error`, error);
+	} catch (error: any) {
+		errors.push(error.message);
 	}
 	try {
 		const nextRes: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank + 1}`);
 		nextProject = nextRes ? await nextRes.json() : [];
-	} catch (error) {
-		console.error(`error`, error);
+	} catch (error: any) {
+		errors.push(error.message);
 	}
 
 	return {
@@ -166,6 +167,7 @@ export async function getStaticProps({ params: { slug } }: any) {
 			nextProject: nextProject?.[0] || {},
 		},
 		revalidate: 60,
+		error: errors,
 	};
 }
 

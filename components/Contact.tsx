@@ -1,11 +1,12 @@
 import styles from "../styles/Contact.module.css";
 import Image from "next/image";
-import { FormEvent, MutableRefObject, useRef } from "react";
+import { FormEvent, MutableRefObject, useRef, useState } from "react";
 import type { FC } from "react";
 import emailjs from "emailjs-com";
 
 const Contact: FC = () => {
 	const form: MutableRefObject<HTMLFormElement | null> = useRef(null);
+	const [error, setError] = useState("");
 	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (!form.current) return;
@@ -17,12 +18,11 @@ const Contact: FC = () => {
 				`${process.env.NEXT_PUBLIC_USER_ID}`
 			)
 			.then(
-				(result) => {
+				() => {
 					form.current?.reset();
-					console.log(`result: `, result.text);
 				},
 				(error) => {
-					console.error("error: ", error.text);
+					setError(error.text);
 				}
 			);
 	};
@@ -66,7 +66,6 @@ const Contact: FC = () => {
 						type="text"
 						autoComplete="name"
 						required
-						role="text"
 						arial-label="Enter your Name"
 					/>
 					<input
@@ -75,7 +74,6 @@ const Contact: FC = () => {
 						placeholder="Subject"
 						type="text"
 						required
-						role="text"
 						arial-label="Enter your Subject for this Mail"
 					/>
 					<input placeholder="Email" id="email" type="email" name="email" autoComplete="email" required />
@@ -87,12 +85,12 @@ const Contact: FC = () => {
 						minLength={50}
 						maxLength={100}
 						spellCheck="true"
-						role="text"
 						arial-label="Enter your Message for this Mail"
 					/>
 					<button type="submit" aria-label="Submit the email form">
 						Submit
 					</button>
+					<p className={styles.error}>{error}</p>
 				</form>
 			</div>
 		</section>
