@@ -13,8 +13,9 @@ type Props = {
 	project: Project;
 	nextProject: Project;
 	notFound?: boolean;
+	errors: string[];
 };
-const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) => {
+const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject, errors }) => {
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -30,6 +31,8 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) =>
 		});
 		return keywords;
 	};
+	// eslint-disable-next-line no-console
+	console.log("errors", errors);
 	return (
 		<Layout
 			title={`${project.name} | Chetan Jain`}
@@ -167,7 +170,7 @@ export async function getStaticProps({ params: { slug } }: any) {
 			nextProject: nextProject?.[0] || {},
 		},
 		revalidate: 60,
-		error: errors,
+		errors,
 	};
 }
 
