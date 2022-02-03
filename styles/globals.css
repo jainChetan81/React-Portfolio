@@ -15,8 +15,12 @@
 	--blue: #016fb9;
 	--clr-light: rgb(255, 255, 255);
 	--clr-secondary: rgb(0, 66, 199);
-	--icon-color-matrix: #0affa0;
+	--icon-color-matrix: #10da8c;
 	background-color: #212121;
+}
+
+*:focus {
+	outline: 1px solid var(--text-primary);
 }
 
 div.body.dark {

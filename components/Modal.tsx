@@ -1,6 +1,6 @@
 import styles from "../styles/Modal.module.css";
 import PropTypes from "prop-types";
-import { useEffect, useState, FC, MouseEvent } from "react";
+import { useEffect, useState, FC, MouseEvent, KeyboardEvent } from "react";
 import ReactDOM from "react-dom";
 
 type Props = {
@@ -15,7 +15,7 @@ const Modal: FC<Props> = ({ show, onClose, children, title, type }) => {
 	const [isBrowser, setIsBrowser] = useState(false);
 	useEffect(() => setIsBrowser(true), []);
 
-	const handleClose = (e: MouseEvent<HTMLButtonElement>): void => {
+	const handleClose = (e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>): void => {
 		e.preventDefault();
 		onClose();
 	};
@@ -51,7 +51,7 @@ const Modal: FC<Props> = ({ show, onClose, children, title, type }) => {
 		<div data-testid="modal" className={styles.overlay}>
 			<div className={styles.modal}>
 				<div className={styles.header}>
-					<button type="button" onClick={handleClose} aria-label="CLose the modal">
+					<button type="button" onClick={handleClose} onKeyDown={handleClose} aria-label="CLose the modal">
 						{getIcon(type)}
 					</button>
 				</div>

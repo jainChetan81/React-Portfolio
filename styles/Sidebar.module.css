@@ -38,11 +38,13 @@
 	width: 100%;
 }
 
+.nav_link:focus,
 .nav_link:hover {
 	filter: grayscale(0%) opacity(1);
 	background: var(--bg-secondary);
 	color: var(--text-secondary);
 }
+.nav_link:focus svg,
 .nav_link:hover svg {
 	color: var(--icon-color-matrix);
 }
@@ -82,6 +84,7 @@
 	color: var(--icon-color-matrix);
 }
 
+.navbar:focus .logo svg,
 .navbar:hover .logo svg {
 	transform: rotate(-180deg);
 }
@@ -118,18 +121,22 @@
 		height: 100vh;
 	}
 
+	.navbar:focus,
 	.navbar:hover {
 		width: 240px;
 	}
 
+	.navbar:focus .link_text,
 	.navbar:hover .link_text {
 		display: inline;
 	}
 
+	.navbar:focus .logo svg,
 	.navbar:hover .logo svg {
 		margin-left: 180px;
 	}
 
+	.navbar:focus .logo_text,
 	.navbar:hover .logo_text {
 		left: 0px;
 	}

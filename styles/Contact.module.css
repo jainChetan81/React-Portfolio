@@ -84,10 +84,12 @@ section.contact .contacts .contact_info a[href^="tel"] {
 	unicode-bidi: bidi-override;
 	direction: rtl;
 }
-section.contact .contacts .contact_info:hover {
+section.contact .contacts .contact_info:hover,
+section.contact .contacts .contact_info:focus {
 	background-color: var(--pink);
 }
-section.contact .contacts .contact_info:hover a {
+section.contact .contacts .contact_info:hover a,
+section.contact .contacts .contact_info:focus a {
 	color: #fff;
 }
 
@@ -139,7 +141,8 @@ section.contact .form form button {
 	font-weight: 500;
 	transition: filter 0.25s;
 }
-section.contact .form form button:hover {
+section.contact .form form button:hover,
+section.contact .form form button:focus {
 	filter: brightness(0.8);
 }
 .error {

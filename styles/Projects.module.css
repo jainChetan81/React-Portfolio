@@ -65,7 +65,8 @@ section.projects .projects_container .project {
 	height: 100%;
 	color: #fff;
 }
-section.projects .projects_container .project:hover {
+section.projects .projects_container .project:hover,
+section.projects .projects_container .project:focus {
 	transform: translateY(-5px);
 	background-color: var(--pink);
 }
@@ -96,7 +97,8 @@ section.projects .projects_container .project p a {
 	border-bottom: 1px solid var(--icon-color-matrix);
 	transition: color 0.25s;
 }
-section.projects .projects_container .project p a:hover {
+section.projects .projects_container .project p a:hover,
+section.projects .projects_container .project p a:focus {
 	color: var(--icon-color-matrix);
 }
 section.projects .projects_container .project footer {
@@ -131,7 +133,8 @@ section.projects .projects_container .project footer .tech_list {
 	font-size: 1.2rem;
 	transition: all ease-in-out 0.2s;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus {
 	opacity: 1;
 	transform: scale(1.1, 1.2);
 }
@@ -185,6 +188,7 @@ section.projects .projects_container .project footer .tech_list {
 .front .links a svg {
 	transition: all ease-in-out 0.2s;
 }
+.front .links a:focus svg,
 .front .links a:hover svg {
 	color: var(--icon-color-matrix);
 	transform: scale(1.2);
@@ -228,26 +232,32 @@ section.projects .projects_container .project footer .tech_list {
 	opacity: 0;
 	height: 390px;
 }
-.card:hover .rank {
+.card:hover .rank,
+.card:focus .rank {
 	transform: translate(125%, -120%);
 }
-.card:hover .front {
+.card:hover .front,
+.card:focus .front {
 	transform: translateY(-30%) scale(0.8);
 }
-.card:hover .front .name {
+.card:hover .front .name,
+.card:focus .front .name {
 	display: none;
 	animation: gameName 250ms forwards;
 }
-.card:hover .front .links {
+.card:hover .front .links,
+.card:focus .front .links {
 	display: flex;
 	columns: 2;
 	column-gap: 10px;
 }
-.card:hover .back {
+.card:hover .back,
+.card:focus .back {
 	opacity: 1;
 	transform: translateY(0);
 	transition: transform 200ms ease, opacity 100ms linear;
 }
+.card:focus .back .streamers,
 .card:hover .back .streamers {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -255,12 +265,15 @@ section.projects .projects_container .project footer .tech_list {
 	width: 100%;
 	justify-content: space-between;
 }
+.card:focus .back .streamer,
 .card:hover .back .streamer {
 	font-size: 0.9rem;
 }
+.card:focus .back .streamer .name,
 .card:hover .back .streamer .name {
 	font-weight: bold;
 }
+.card:focus .background,
 .card:hover .background {
 	transition: var(--transition), opacity 100ms linear;
 	opacity: 1;

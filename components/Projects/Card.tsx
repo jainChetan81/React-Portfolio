@@ -26,7 +26,7 @@ const Card: FC<Props> = ({
 	technologies,
 	endDate,
 }) => (
-	<article className={styles.card} itemScope itemType="https://schema.org/Article">
+	<article className={styles.card} itemScope itemType="https://schema.org/Article" tabIndex={rank}>
 		<meta itemProp="name" content={name} />
 		<meta itemProp="url" content={`https://thechetanjain.in/projects/${slug}`} />
 		<meta itemProp="image" content={displayImage.url} />

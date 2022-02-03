@@ -76,7 +76,8 @@ section.about .about_image img {
 	filter: grayscale(1);
 	transition: filter 0.5s;
 }
-section.about .about_image img:hover {
+section.about .about_image img:hover,
+section.about .about_image img:focus {
 	filter: grayscale(0);
 }
 @media only screen and (max-width: 480px) {

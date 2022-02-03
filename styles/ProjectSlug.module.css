@@ -43,10 +43,13 @@
 	transition: all ease-in-out 0.25s;
 }
 .project .pagination a:hover h4,
-.project .pagination a:hover svg {
+.project .pagination a:hover svg,
+.project .pagination a:focus h4,
+.project .pagination a:focus svg {
 	color: var(--icon-color-matrix);
 	text-shadow: none;
 }
+.project .pagination a:focus p,
 .project .pagination a:hover p {
 	opacity: 1;
 }

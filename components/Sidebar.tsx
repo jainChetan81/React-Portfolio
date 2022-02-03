@@ -89,6 +89,7 @@ const Sidebar: FC<Props> = ({ isDark, setIsDark }) => {
 					<button
 						className={styles.nav_link}
 						onClick={handleChange}
+						onKeyDown={handleChange}
 						aria-label="change theme between light and dark">
 						{isDark ? (
 							<svg
