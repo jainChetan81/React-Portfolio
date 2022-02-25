@@ -19,7 +19,7 @@ export const getServerSideProps = async ({ res }: { res: NextApiResponse }) => {
 	const projects: Project[] = await response.json();
 
 	const dynamicPaths: string[] = projects.map(
-		(singleProduct: Project) => `${BASE_URL}/product/${singleProduct.slug}`
+		(singleProduct: Project) => `${BASE_URL}/projects/${singleProduct.slug}`
 	);
 
 	const allPaths = [...staticPaths, ...dynamicPaths];

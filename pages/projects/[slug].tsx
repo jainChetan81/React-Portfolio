@@ -168,9 +168,9 @@ export async function getStaticProps({ params: { slug } }: any) {
 			previousProject: previousProject?.[0] || {},
 			project: project[0],
 			nextProject: nextProject?.[0] || {},
+			errors,
 		},
 		revalidate: 60,
-		errors,
 	};
 }
 
