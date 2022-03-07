@@ -28,19 +28,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 				}
 			}, 2000);
 		};
-		const handleRouteChangeError = (err: any, url: string) => {
-			if (err.cancelled) {
-				console.error(`Route to ${url} was cancelled!`);
-			}
-		};
 
 		router.events.on("routeChangeStart", handleRouteChange);
 		router.events.on("routeChangeComplete", handleRouteComplete);
-		router.events.on("routeChangeError", handleRouteChangeError);
 		return () => {
 			router.events.off("routeChangeStart", handleRouteChange);
 			router.events.off("routeChangeComplete", handleRouteComplete);
-			router.events.off("routeChangeError", handleRouteChangeError);
 		};
 	});
 

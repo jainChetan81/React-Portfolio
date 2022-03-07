@@ -112,7 +112,7 @@ section.contact .form form {
 }
 section.contact .form form input,
 section.contact .form form textarea {
-	/* width: 600px; */
+	width: 600px;
 	padding: 10px 20px;
 	border-radius: 16px;
 	outline: none;

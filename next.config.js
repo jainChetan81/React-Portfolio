@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable no-undef */
 const withPWA = require("next-pwa");
-
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+	enabled: process.env.ANALYZE === "true",
+});
+module.exports = withBundleAnalyzer({});
 // @ts-ignore
 module.exports = withPWA({
 	pwa: {
