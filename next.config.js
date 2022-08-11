@@ -19,7 +19,6 @@ module.exports = withPWA({
 		minimumCacheTTL: 3600,
 		disableStaticImages: true,
 	},
-	swcMinify: true,
 	webpack(config) {
 		config.module.rules.push({
 			test: [/(components|api|constants|redux|schema|utils)\/index.ts/i],
