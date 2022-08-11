@@ -74,19 +74,21 @@ const Card: FC<Props> = ({
 				</a>
 			</Link>
 			<div className={styles.streamers}>
-				{technologies.slice(0, 6).map((tech, i) => (
-					<div className={styles.streamer} key={tech.icon + i}>
-						<div className={styles.icon}>
-							<Image
-								src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30,r-20`}
-								width={30}
-								height={30}
-								alt={`${tech} icon`}
-							/>
+				{technologies &&
+					Array.isArray(technologies) &&
+					technologies.slice(0, 6).map((tech, i) => (
+						<div className={styles.streamer} key={tech.icon + i}>
+							<div className={styles.icon}>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30,r-20`}
+									width={30}
+									height={30}
+									alt={`${tech} icon`}
+								/>
+							</div>
+							<p className={styles.name}>{tech.name}</p>
 						</div>
-						<p className={styles.name}>{tech.name}</p>
-					</div>
-				))}
+					))}
 			</div>
 		</div>
 		<div className={styles.background}></div>
