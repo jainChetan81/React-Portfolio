@@ -13,9 +13,8 @@ type Props = {
 	project: Project;
 	nextProject: Project;
 	notFound?: boolean;
-	errors: string[];
 };
-const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject, errors }) => {
+const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject }) => {
 	//function that return date in format MMM DD, YYYY
 	const getDate = (date: string): string => {
 		const dateObj = new Date(date);
@@ -31,8 +30,6 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject, erro
 		});
 		return keywords;
 	};
-	// eslint-disable-next-line no-console
-	console.log("errors", errors);
 	return (
 		<Layout
 			title={`${project.name} | Chetan Jain`}
@@ -129,17 +126,7 @@ const ProjectDetails: FC<Props> = ({ previousProject, project, nextProject, erro
 	);
 };
 
-export async function getStaticPaths() {
-	const res = await fetch(`${process.env.BASE_API}/portfolio-projects?_sort=rank:ASC`);
-	const projects: Project[] = await res.json();
-	const paths = projects.map((project) => ({ params: { slug: project.slug } }));
-	return {
-		paths,
-		fallback: false,
-	};
-}
-
-export async function getStaticProps({ params: { slug } }: any) {
+export async function getServerSideProps({ params: { slug } }: any) {
 	const res = await fetch(`${process.env.BASE_API}/portfolio-projects?slug=${slug}`);
 	const errors: string[] = [];
 	const project = await res.json();
@@ -162,15 +149,14 @@ export async function getStaticProps({ params: { slug } }: any) {
 	} catch (error: any) {
 		errors.push(error.message);
 	}
+	console.log(errors);
 
 	return {
 		props: {
 			previousProject: previousProject?.[0] || {},
 			project: project[0],
 			nextProject: nextProject?.[0] || {},
-			errors,
 		},
-		revalidate: 60,
 	};
 }
 

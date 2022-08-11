@@ -13,11 +13,10 @@ const Home: NextPage<{ projects: Project[] }> = ({ projects }) => (
 );
 
 export default NetworkDetector(Home);
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const res: Response = await fetch(`${process.env.BASE_API}/portfolio-projects?_sort=rank:ASC`);
 	const projects: Project[] = (await res.json()) || [];
 	return {
 		props: { projects },
-		revalidate: 60,
 	};
 }

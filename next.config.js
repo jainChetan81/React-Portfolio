@@ -1,17 +1,17 @@
 /** @type {import('next').NextConfig} */
 /* eslint-disable no-undef */
 const withPWA = require("next-pwa");
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-	enabled: process.env.ANALYZE === "true",
-});
-module.exports = withBundleAnalyzer({});
+const runtimeCaching = require("next-pwa/cache");
 // @ts-ignore
 module.exports = withPWA({
 	pwa: {
 		dest: "public",
-		register: true,
-		skipWaiting: true,
 		disable: process.env.NODE_ENV === "development",
+		register: true,
+		scope: "/",
+		sw: "service-worker.js",
+		runtimeCaching,
+		buildExcludes: [/middleware-manifest.json$/],
 	},
 	reactStrictMode: true,
 	images: {
@@ -20,4 +20,12 @@ module.exports = withPWA({
 		disableStaticImages: true,
 	},
 	swcMinify: true,
+	webpack(config) {
+		config.module.rules.push({
+			test: [/(components|api|constants|redux|schema|utils)\/index.ts/i],
+			sideEffects: false,
+		});
+		return config;
+	},
+	maximumFileSizeToCacheInBytes: 5242880,
 });

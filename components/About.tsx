@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styles from "../styles/About.module.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/image";
