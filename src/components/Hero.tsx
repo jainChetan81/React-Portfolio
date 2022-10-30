@@ -27,8 +27,8 @@ const Hero: FC = () => (
 			</ScrollAnimation>
 
 			<ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-				<Link href="#contact">
-					<a className={styles.button}>Contact Me</a>
+				<Link href="#contact" className={styles.button}>
+					Contact Me
 				</Link>
 			</ScrollAnimation>
 		</div>
