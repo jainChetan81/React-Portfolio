@@ -1,23 +1,18 @@
 import Link from "next/link";
-import type { FC } from "react";
 import Layout from "../components/Layout";
 
-const NotFound: FC = () => (
+const NotFound = () => (
   <Layout title="Chetan Jain | 404">
     <div className="not-found px-4 pt-40 sm:px-6 sm:py-20 md:grid md:-ml-64 lg:px-8 flex items-start sm:items-center">
       <div className="max-w-max mx-auto">
         <main className="sm:flex pb-2">
-          <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">
-            404
-          </p>
+          <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">404</p>
           <div className="sm:ml-6">
             <div className="sm:border-l sm:border-gray-200 sm:pl-6">
               <h1 className="text-4xl my-auto font-extrabold text-indigo-600 tracking-tight sm:text-5xl">
                 Page not found
               </h1>
-              <p className="mt-1 text-base text-gray-500">
-                Please check the URL in the address bar and try again.
-              </p>
+              <p className="mt-1 text-base text-gray-500">Please check the URL in the address bar and try again.</p>
             </div>
             <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
               <Link

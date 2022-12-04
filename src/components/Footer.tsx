@@ -1,10 +1,9 @@
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import type { FC } from "react";
 import { FaGithubSquare, FaLinkedin, FaStackOverflow, FaTwitter } from "react-icons/fa";
 
-const Footer: FC = () => (
+const Footer = () => (
   <footer className={styles.footer}>
     <Link href="/" className={styles.logo} itemProp="name" id="Chetan Jain Logo">
       <span>J</span>
