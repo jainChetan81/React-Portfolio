@@ -25,17 +25,9 @@ const Card: FC<Props> = ({
   technologies,
   endDate,
 }) => (
-  <article
-    className={styles.card}
-    itemScope
-    itemType="https://schema.org/Article"
-    tabIndex={rank}
-  >
+  <article className={styles.card} itemScope itemType="https://schema.org/Article" tabIndex={rank}>
     <meta itemProp="name" content={name} />
-    <meta
-      itemProp="url"
-      content={`https://thechetanjain.in/projects/${slug}`}
-    />
+    <meta itemProp="url" content={`https://thechetanjain.in/projects/${slug}`} />
     <meta itemProp="image" content={displayImage} />
     <meta itemProp="description" content={summary} />
     <meta itemProp="author" content="The Chetan Jain" />
@@ -48,10 +40,7 @@ const Card: FC<Props> = ({
     <div className={styles.front}>
       <Image
         className={styles.thumbnail}
-        src={`${
-          "https://ik.imagekit.io/clhowstalgz/chetan?ik-sdk-version=javascript-1.4.3&updatedAt=1641264174692" ||
-          `${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/portfolio/skyrim.jpg`
-        }?tr=w-250,h-300`}
+        src={`/images/${slug}.webp`}
         height={300}
         width={250}
         alt={`${name} thumbnail`}
@@ -63,6 +52,7 @@ const Card: FC<Props> = ({
           target="_blank"
           rel="noreferrer nofollow"
           aria-label={`github url of ${name}`}
+          title={`github url of ${name}`}
         >
           <FaGithub />
         </a>
@@ -72,6 +62,7 @@ const Card: FC<Props> = ({
             target="_blank"
             rel="noreferrer nofollow"
             aria-label={`hosted url of ${name}`}
+            title={`hosted url of ${name}`}
           >
             <FaExternalLinkAlt />
           </a>
@@ -84,9 +75,10 @@ const Card: FC<Props> = ({
       </div>
       <Link
         href={`/projects/${slug}`}
-        aria-label={`Descripton of ${name}`}
+        aria-label={`Description of ${name}`}
         itemProp="author"
         className={styles.btn}
+        title={`Description of ${name}`}
       >
         Read More
       </Link>
@@ -96,12 +88,7 @@ const Card: FC<Props> = ({
           technologies.slice(0, 6).map((tech, i) => (
             <div className={styles.streamer} key={tech.icon + i}>
               <div className={styles.icon}>
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_IMAGEKIT_URL}/icons/${tech.icon}?tr=w-30,h-30,r-20`}
-                  width={30}
-                  height={30}
-                  alt={`${tech} icon`}
-                />
+                <Image src={`/images/${tech.icon}.svg`} width={30} height={30} alt={`${tech} icon`} />
               </div>
               <p className={styles.name}>{tech.name}</p>
             </div>
