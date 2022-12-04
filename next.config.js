@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  // experimental: {
+  //   appDir: true,
+  // },
   images: {
-    domains: [
-      "res.imagekit.io",
-      "doodleipsum.com",
-      "res.cloudinary.com",
-      "ik.imagekit.io",
-    ],
+    domains: ["res.imagekit.io", "doodleipsum.com", "res.cloudinary.com", "ik.imagekit.io"],
     minimumCacheTTL: 3600,
     disableStaticImages: true,
   },

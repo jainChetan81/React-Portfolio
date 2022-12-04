@@ -6,7 +6,7 @@ import Card from "./Card";
 const Projects = () => (
   <section className={styles.projects} id="projects">
     <div className={styles.projects_container}>
-      <h2 className="capitalize inline-block sm:hidden">my projects</h2>
+      <h2 className="capitalize inline-block sm:hidden">My Projects</h2>
       {projects.map((project: Project) => (
         <ScrollAnimation animateIn="flipInX" key={project.rank}>
           <Card
@@ -27,7 +27,7 @@ const Projects = () => (
 );
 export default Projects;
 
-const projects: Project[] = [
+const projects: Readonly<Project[]> = [
   {
     rank: 1,
     name: "Pokedex",
@@ -36,8 +36,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/jainChetan81/Pokemon-Gallery",
     externalUrl: "https://pokemon-gallery.vercel.app/",
     displayImage: "https://i.ibb.co/0nZ3Z3r/pokemon-gallery.png",
-    summary:
-      "A Gallery of pokemon with individual static pages for each pokemon as pages.",
+    summary: "A Gallery of pokemon with individual static pages for each pokemon as pages.",
     startDate: "Aug 1, 2021",
     endDate: " Oct 1, 2021",
     technologies: [
@@ -71,8 +70,7 @@ const projects: Project[] = [
     rank: 2,
     name: "Burger Builder",
     slug: "burger-builder",
-    summary:
-      "A Restaurant application where you can create your own burger and then order it",
+    summary: "A Restaurant application where you can create your own burger and then order it",
     description: "",
     githubUrl: "https://github.com/jainChetan81/Burger-builder-App",
     externalUrl: "https://burger-builder-2f6a1.web.app/",
