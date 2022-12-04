@@ -1,6 +1,5 @@
 import Head from "next/head";
-import type { FC } from "react";
-import { LegacyRef, useEffect, useRef, useState } from "react";
+import { LegacyRef, useRef } from "react";
 import { Footer, Sidebar } from ".";
 type LayoutType = {
   title: string;
@@ -8,13 +7,8 @@ type LayoutType = {
   description?: string;
   children?: any;
 };
-const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
+const Layout = ({ title, keywords, description, children }: LayoutType) => {
   const bodyRef: LegacyRef<HTMLDivElement> = useRef(null);
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    bodyRef?.current?.classList.toggle("dark");
-  }, [isDark]);
   return (
     <>
       <Head>
@@ -28,7 +22,7 @@ const Layout: FC<LayoutType> = ({ title, keywords, description, children }) => {
         <link rel="manifest" href="manifest.json" />
       </Head>
       <div className="body dark" ref={bodyRef}>
-        <Sidebar isDark={isDark} setIsDark={setIsDark} />
+        <Sidebar bodyRef={bodyRef} />
         <div className="custom-shape-divider-top">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path

@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { FC } from "react";
-import {
-  FaExternalLinkAlt,
-  FaGithub,
-  FaLongArrowAltLeft,
-  FaLongArrowAltRight,
-} from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
 import type { Project } from "../../@types";
 import { Layout } from "../../components";
@@ -18,11 +12,7 @@ type Props = {
   nextProject: Project;
   notFound?: boolean;
 };
-const ProjectDetails: FC<Props> = ({
-  previousProject,
-  project,
-  nextProject,
-}) => {
+const ProjectDetails = ({ previousProject, project, nextProject }: Props) => {
   //function that return date in format MMM DD, YYYY
   const getDate = (date: string): string => {
     const dateObj = new Date(date);
@@ -39,15 +29,9 @@ const ProjectDetails: FC<Props> = ({
     return keywords;
   };
   return (
-    <Layout
-      title={`${project.name} | Chetan Jain`}
-      keywords={getKeywords().join(",")}
-      description={project.summary}
-    >
+    <Layout title={`${project.name} | Chetan Jain`} keywords={getKeywords().join(",")} description={project.summary}>
       <section className={styles.project}>
-        <h1 className="text-center pb-10 capitalize text-5xl">
-          {project.name}
-        </h1>
+        <h1 className="text-center pb-10 capitalize text-5xl">{project.name}</h1>
         <div className="flex flex-col sm:flex-row justify-between gap-10 items-center">
           <div className="contributor flex flex-row gap-x-5">
             <Image
@@ -115,9 +99,7 @@ const ProjectDetails: FC<Props> = ({
               <FaLongArrowAltLeft className="w-32 h-20 mr-5" />
               <aside>
                 <h4 className="font-bold text-2xl uppercase">Previous</h4>
-                <p className="break-words opacity-40">
-                  {previousProject.summary}
-                </p>
+                <p className="break-words opacity-40">{previousProject.summary}</p>
               </aside>
             </Link>
           ) : (
@@ -143,9 +125,7 @@ const ProjectDetails: FC<Props> = ({
 };
 
 export async function getServerSideProps({ params: { slug } }: any) {
-  const res = await fetch(
-    `${process.env.BASE_API}/portfolio-projects?slug=${slug}`
-  );
+  const res = await fetch(`${process.env.BASE_API}/portfolio-projects?slug=${slug}`);
   const errors: string[] = [];
   const project = await res.json();
   if (!project || project[0].slug !== slug) {
@@ -156,17 +136,13 @@ export async function getServerSideProps({ params: { slug } }: any) {
   let previousProject;
   let nextProject;
   try {
-    const prevRes = await fetch(
-      `${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank - 1}`
-    );
+    const prevRes = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank - 1}`);
     previousProject = prevRes ? await prevRes.json() : [];
   } catch (error: any) {
     errors.push(error.message);
   }
   try {
-    const nextRes = await fetch(
-      `${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank + 1}`
-    );
+    const nextRes = await fetch(`${process.env.BASE_API}/portfolio-projects?rank=${project[0].rank + 1}`);
     nextProject = nextRes ? await nextRes.json() : [];
   } catch (error: any) {
     errors.push(error.message);

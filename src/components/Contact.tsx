@@ -1,10 +1,9 @@
 import styles from "../styles/Contact.module.css";
 import Image from "next/image";
 import { FormEvent, MutableRefObject, useRef, useState } from "react";
-import type { FC } from "react";
 import emailjs from "emailjs-com";
 
-const Contact: FC = () => {
+const Contact = () => {
   const form: MutableRefObject<HTMLFormElement | null> = useRef(null);
   const [error, setError] = useState("");
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {

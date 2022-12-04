@@ -1,9 +1,8 @@
 import styles from "../styles/About.module.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import Image from "next/image";
-import type { FC } from "react";
 
-const About: FC = () => {
+const About = () => {
   const abilities: string[] = ["react", "typescript", "html", "css", "node", "javascript", "mysql", "sass"];
   return (
     <section className={styles.about} id="about">

@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/Projects.module.css";
@@ -14,17 +13,7 @@ type Props = {
   externalUrl: string;
   technologies: { name: string; icon: string }[];
 };
-const Card: FC<Props> = ({
-  rank,
-  name,
-  slug,
-  summary,
-  githubUrl,
-  displayImage,
-  externalUrl,
-  technologies,
-  endDate,
-}) => (
+const Card = ({ rank, name, slug, summary, githubUrl, displayImage, externalUrl, technologies, endDate }: Props) => (
   <article className={styles.card} itemScope itemType="https://schema.org/Article" tabIndex={rank}>
     <meta itemProp="name" content={name} />
     <meta itemProp="url" content={`https://thechetanjain.in/projects/${slug}`} />
