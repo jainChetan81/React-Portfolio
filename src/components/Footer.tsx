@@ -1,6 +1,5 @@
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import { FaGithubSquare, FaLinkedin, FaStackOverflow, FaTwitter } from "react-icons/fa";
 
 const Footer = () => (
@@ -11,7 +10,7 @@ const Footer = () => (
     </Link>
     <div>
       <p>
-        This site was made with <Image src="/images/react.svg" alt="react icon" width={35} height={35} /> lot of{" "}
+        This site was made with <img src="/images/react.svg" alt="react icon" width={35} height={35} /> lot of{" "}
         <span>💓</span>
       </p>
     </div>
