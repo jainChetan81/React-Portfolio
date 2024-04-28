@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import styles from "../../styles/Projects.module.css";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 type Props = {
   rank: number;
   name: string;

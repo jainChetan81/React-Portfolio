@@ -1,4 +1,3 @@
-import ScrollAnimation from "react-animate-on-scroll";
 import type { Project } from "../../@types";
 import styles from "../../styles/Projects.module.css";
 import Card from "./Card";
@@ -8,19 +7,18 @@ const Projects = () => (
     <div className={styles.projects_container}>
       <h2 className="capitalize inline-block sm:hidden">My Projects</h2>
       {projects.map((project: Project) => (
-        <ScrollAnimation animateIn="flipInX" key={project.rank}>
-          <Card
-            rank={project.rank}
-            name={project.name}
-            slug={project.slug}
-            summary={project.summary}
-            githubUrl={project.githubUrl}
-            displayImage={project.displayImage}
-            externalUrl={project.externalUrl}
-            technologies={project.technologies}
-            endDate={project.endDate}
-          />
-        </ScrollAnimation>
+        <Card
+          key={project.rank}
+          rank={project.rank}
+          name={project.name}
+          slug={project.slug}
+          summary={project.summary}
+          githubUrl={project.githubUrl}
+          displayImage={project.displayImage}
+          externalUrl={project.externalUrl}
+          technologies={project.technologies}
+          endDate={project.endDate}
+        />
       ))}
     </div>
   </section>
