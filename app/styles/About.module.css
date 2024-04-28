@@ -1,0 +1,110 @@
+section.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-top: 300px;
+}
+section.about::before {
+  content: "About";
+  position: absolute;
+  font-size: 28vw;
+  letter-spacing: -25px;
+  top: -4rem;
+  left: -3rem;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  color: var(--bg-primary);
+  text-shadow: -1px 0 var(--bg-primary), 0 1px var(--bg-primary), 1px 0 var(--bg-primary), 0 -1px var(--bg-primary);
+  opacity: 0.5;
+  z-index: -1;
+}
+@media (max-width: 1000px) {
+  section.about {
+    padding-top: 200px;
+  }
+  section.about::before {
+    top: -2rem;
+    font-size: 25vw;
+    letter-spacing: -5px;
+  }
+}
+@media (max-width: 740px) {
+  section.about {
+    padding-top: 0;
+  }
+  section.about::before {
+    content: none;
+  }
+}
+
+section.about .hard_skills {
+  margin-block: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+section.about .hard_ability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.about .hard_ability img {
+  width: 34px;
+}
+section.about h2 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--icon-color-matrix);
+  font-size: 40px;
+  display: none;
+}
+section.about h3 {
+  margin-top: 20px;
+  color: var(--icon-color-matrix);
+}
+section.about p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+section.about .about_image {
+  text-align: center;
+}
+section.about .about_image img {
+  margin-top: 20px;
+  width: 100%;
+  filter: grayscale(1);
+  transition: filter 0.5s;
+  height: 420px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+section.about .about_image img:hover,
+section.about .about_image img:focus {
+  filter: grayscale(0);
+}
+@media only screen and (max-width: 480px) {
+  section.about h2 {
+    display: block;
+  }
+  section.about .about_image {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 960px) {
+  section.about {
+    display: block;
+    text-align: center;
+  }
+  section.about .about_image {
+    display: flex;
+    justify-content: center;
+  }
+  section.about .hard_skills {
+    justify-content: center;
+  }
+}

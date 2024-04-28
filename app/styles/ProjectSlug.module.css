@@ -1,0 +1,164 @@
+.project {
+	margin-top: 0;
+	width: 85%;
+	margin-inline: auto;
+	/* overflow: hidden; */
+	min-height: calc(100vh - 150px);
+}
+@media screen and (max-width: 1000px) {
+	.project {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.project {
+		width: 100%;
+	}
+}
+.project > h1 {
+	border-bottom: 1.5px solid var(--text-primary);
+}
+.url {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.url a {
+	height: 40px;
+	width: 60px;
+}
+.url a svg {
+	margin-inline: auto;
+}
+.url a:nth-last-of-type(1) {
+	border-left: 1px solid var(--text-primary);
+}
+.project .pagination a h4 {
+	color: var(--bg-main);
+	text-shadow: -1px 0 var(--icon-color-matrix), 0 1px var(--icon-color-matrix), 1px 0 var(--icon-color-matrix),
+		0 -1px var(--icon-color-matrix);
+}
+.project .pagination a * {
+	transition: all ease-in-out 0.25s;
+}
+.project .pagination a:hover h4,
+.project .pagination a:hover svg,
+.project .pagination a:focus h4,
+.project .pagination a:focus svg {
+	color: var(--icon-color-matrix);
+	text-shadow: none;
+}
+.project .pagination a:focus p,
+.project .pagination a:hover p {
+	opacity: 1;
+}
+.project .pagination a p {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.markdown {
+	margin-block: 2rem;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+	font-weight: bold;
+	margin-block: 1rem;
+}
+.markdown h1 {
+	font-size: 3rem;
+}
+.markdown h2 {
+	font-size: 2.5rem;
+}
+.markdown h3 {
+	font-size: 2rem;
+}
+.markdown h4 {
+	font-size: 1.5rem;
+}
+.markdown h5 {
+	font-size: 1.25rem;
+}
+.markdown h6 {
+	font-size: 1rem;
+}
+.markdown strong {
+	text-transform: capitalize;
+	margin-right: 10px;
+	line-height: 20px;
+	font-size: 1.1rem;
+}
+.markdown p,
+.markdown code {
+	font-size: 1rem;
+	margin-block: 0.5rem;
+}
+.markdown pre {
+	overflow: auto;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
+	scrollbar-width: thin;
+}
+.markdown code {
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	padding: 1rem 0.5rem;
+	border-radius: 5px;
+	display: inline-block;
+	font-weight: 500;
+}
+.markdown ul {
+	list-style: disc;
+}
+.markdown ul li {
+	margin-block: 0.8rem;
+	margin-left: 20px;
+}
+.image_container {
+	width: 100%;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	/* Needed to work on iOS Safari */
+	overflow: hidden;
+	overflow-x: scroll;
+	display: flex;
+	scrollbar-color: var(--icon-color-matrix) #1e1e24;
+	scrollbar-width: thin;
+}
+@media screen and (max-width: 600px) {
+	.image_container {
+		height: 300px;
+	}
+}
+.image_container figure {
+	scroll-snap-align: start;
+	display: flex;
+	flex: none;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.image_container::-webkit-scrollbar {
+	width: 0.25rem;
+}
+.image_container::-webkit-scrollbar-track {
+	background-color: #1e1e24;
+}
+.image_container::-webkit-scrollbar-thumb {
+	background-color: var(--icon-color-matrix);
+}
+
+@media screen and (min-width: 1000px) {
+	.image_container figure {
+		scroll-margin-left: 100px;
+		width: calc(100% - 100px);
+	}
+}

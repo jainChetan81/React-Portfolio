@@ -1,15 +1,11 @@
-"use client"
-import Link from "next/link";
-import type { RefObject } from "react";
 import { FaFile, FaFolder, FaHome, FaMobile, FaUserAlt } from "react-icons/fa";
 import styles from "../styles/Sidebar.module.css";
-type Props = {
-  bodyRef: RefObject<HTMLDivElement>;
-};
-const Sidebar = ({ bodyRef }: Props) => {
-  const handleChange = () => {
-    bodyRef?.current?.classList.toggle("dark");
-  };
+import Link from "next/link";
+
+const Sidebar = () => {
+  // const handleChange = () => {
+  //   bodyRef?.current?.classList.toggle("dark");
+  // };
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navbar_nav}>
@@ -79,11 +75,9 @@ const Sidebar = ({ bodyRef }: Props) => {
         <li className={styles.nav_item}>
           <button
             className={styles.nav_link}
-            onClick={handleChange}
-            onKeyDown={handleChange}
             aria-label="change theme between light and dark"
           >
-            {bodyRef?.current?.classList.contains("dark") ? (
+            {true ? (
               <svg
                 className="theme-icon svg-inline--fa fa-moon-stars fa-w-16 fa-7x"
                 id="lightIcon"

@@ -1,0 +1,173 @@
+section.contact {
+  padding-top: 150px;
+}
+section.contact header {
+  text-align: center;
+}
+section.contact header h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--icon-color-matrix);
+  display: none;
+}
+section.contact::before {
+  content: "Contact";
+  position: absolute;
+  font-size: 24vw;
+  letter-spacing: -25px;
+  top: -6rem;
+  left: -3rem;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  color: var(--bg-primary);
+  text-shadow: -1px 0 var(--bg-primary), 0 1px var(--bg-primary), 1px 0 var(--bg-primary), 0 -1px var(--bg-primary);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+@media (max-width: 1000px) {
+  section.contact {
+    padding-top: 100px;
+  }
+  section.contact::before {
+    font-size: 20vw;
+    letter-spacing: -5px;
+    left: 0;
+    top: -1rem;
+  }
+}
+@media (max-width: 740px) {
+  section.contact header h2 {
+    display: block;
+  }
+  section.contact {
+    padding-top: 0;
+  }
+  section.contact::before {
+    content: none;
+  }
+}
+
+section.contact p {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--icon-color-matrix);
+  font-weight: 500;
+}
+section.contact .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  place-items: center;
+  margin-top: 80px;
+}
+section.contact .contacts .contact_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 400px;
+  gap: 20px;
+  background-color: var(--icon-color-matrix);
+  border-radius: 14px;
+  padding: 16px 28px;
+  transition: background-color 0.25s;
+}
+section.contact .contacts .contact_info img {
+  width: 40px;
+}
+section.contact .contacts .contact_info a {
+  color: #000;
+  font-weight: 500;
+}
+section.contact .contacts .contact_info a[href^="mailto"],
+section.contact .contacts .contact_info a[href^="tel"] {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+section.contact .contacts .contact_info:hover,
+section.contact .contacts .contact_info:focus {
+  background-color: var(--pink);
+}
+section.contact .contacts .contact_info:hover a,
+section.contact .contacts .contact_info:focus a {
+  color: #fff;
+}
+
+section.contact .form {
+  margin-top: 80px;
+  display: grid;
+  place-items: center;
+}
+section.contact .form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.contact .form form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+section.contact .form form input,
+section.contact .form form textarea {
+  width: 600px;
+  padding: 10px 20px;
+  border-radius: 16px;
+  outline: none;
+  background: none;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+section.contact .form form input::placeholder,
+section.contact .form form textarea::placeholder {
+  color: var(--text-primary);
+}
+section.contact .form form textarea {
+  height: 200px;
+  overflow-y: auto;
+}
+section.contact .form form button {
+  padding: 10px 60px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background-color: var(--icon-color-matrix);
+  color: var(--bg-secondary);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: filter 0.25s;
+}
+section.contact .form form button:hover,
+section.contact .form form button:focus {
+  filter: brightness(0.8);
+}
+.error {
+  color: rgb(161, 48, 48);
+  font-size: 12px;
+}
+@media (max-width: 740px) {
+  section.contact .form form {
+    width: 100%;
+  }
+  section.contact .form form input,
+  section.contact .form form textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  section.contact .contacts {
+    flex-direction: column;
+  }
+  section.contact .contacts .contact_info {
+    width: 100%;
+    flex-direction: column;
+  }
+}

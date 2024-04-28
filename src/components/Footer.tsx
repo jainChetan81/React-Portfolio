@@ -1,3 +1,4 @@
+"use client"
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin, FaStackOverflow, FaTwitter } from "react-icons/fa";

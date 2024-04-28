@@ -1,3 +1,4 @@
+"use client"
 import styles from "../styles/Modal.module.css";
 import { useEffect, useState, MouseEvent, KeyboardEvent } from "react";
 import ReactDOM from "react-dom";

@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head";
 import { LegacyRef, useRef } from "react";
 import { Footer, Sidebar } from ".";

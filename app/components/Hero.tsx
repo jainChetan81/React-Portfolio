@@ -3,7 +3,7 @@ import styles from "../styles/Hero.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
-import { TypedHeading } from ".";
+import TypedHeading from "./TypedHeading";
 const Hero = () => (
   <section className={styles.hero} id="home">
     <div className={styles.hero_text}>

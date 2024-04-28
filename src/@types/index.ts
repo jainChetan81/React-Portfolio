@@ -10,16 +10,4 @@ export type Project = {
   technologies: { name: string; icon: string }[];
   description: string;
   displayImage: string;
-  // sliderImages: {
-  //   name: string;
-  //   url: string;
-  //   formats: {
-  //     small: {
-  //       url: string;
-  //     };
-  //     thumbnail: {
-  //       url: string;
-  //     };
-  //   };
-  // }[];
 };

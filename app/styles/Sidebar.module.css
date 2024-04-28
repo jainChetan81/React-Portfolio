@@ -1,0 +1,155 @@
+.navbar {
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width 600ms ease;
+	overflow: hidden;
+	z-index: 10;
+	font-size: 20px;
+}
+
+.navbar_nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.nav_item {
+	width: 100%;
+}
+
+.nav_item:last-child {
+	margin-top: auto;
+}
+
+.nav_link {
+	display: flex;
+	align-items: center;
+	height: auto;
+	color: var(--text-primary);
+	text-decoration: none;
+	padding-block: 20px;
+	filter: grayscale(100%) opacity(0.7);
+	transition: var(--transition-speed);
+	font-size: 21px;
+	width: 100%;
+}
+
+.nav_link:focus,
+.nav_link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--text-secondary);
+}
+.nav_link:focus svg,
+.nav_link:hover svg {
+	color: var(--icon-color-matrix);
+}
+
+.link_text {
+	display: none;
+	margin-left: 10px;
+}
+
+.nav_link svg {
+	width: 20px;
+	min-width: 30px;
+	margin: 0 15px;
+}
+
+.logo {
+	margin-bottom: 10px;
+	background: var(--bg-secondary);
+	width: 100%;
+	font-size: 30px;
+	color: #fff;
+}
+
+.logo svg {
+	transform: rotate(0deg);
+	transition: var(--transition-speed);
+}
+
+.logo_text {
+	display: inline;
+	position: absolute;
+	left: -999px;
+	transition: var(--transition-speed);
+	font-size: 30px;
+}
+.logo_text::first-letter {
+	color: var(--icon-color-matrix);
+}
+
+.navbar:focus .logo svg,
+.navbar:hover .logo svg {
+	transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 50px;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.navbar_nav {
+		flex-direction: row;
+	}
+
+	.nav_link {
+		justify-content: center;
+	}
+	button.nav_link {
+		padding-top: 10px;
+	}
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	.navbar {
+		top: 0;
+		width: 70px;
+		height: 100vh;
+	}
+
+	.navbar:focus,
+	.navbar:hover {
+		width: 240px;
+	}
+
+	.navbar:focus .link_text,
+	.navbar:hover .link_text {
+		display: inline;
+	}
+
+	.navbar:focus .logo svg,
+	.navbar:hover .logo svg {
+		margin-left: 180px;
+	}
+
+	.navbar:focus .logo_text,
+	.navbar:hover .logo_text {
+		left: 0px;
+	}
+}
+
+#darkIcon {
+	display: block;
+}
+
+#lightIcon {
+	display: block;
+}
+
+#solarIcon {
+	display: block;
+}
