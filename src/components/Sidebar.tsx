@@ -69,7 +69,7 @@ const Sidebar = ({ bodyRef }: Props) => {
           </Link>
         </li>
         <li className={styles.nav_item}>
-          <Link href="/api/resume" className={styles.nav_link} arial-label="download resume">
+          <Link href="/chetan-resume.pdf" className={styles.nav_link} arial-label="download resume">
             <FaFile className="w-10 h-7" />
             <span className={styles.link_text}>Download CV</span>
           </Link>
