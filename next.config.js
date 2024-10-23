@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
 	reactStrictMode: true,
-	experimental: {
-		reactCompiler: true
-	},
 	images: {
 		domains: ["res.imagekit.io", "doodleipsum.com", "res.cloudinary.com", "ik.imagekit.io"],
 		minimumCacheTTL: 3600,
