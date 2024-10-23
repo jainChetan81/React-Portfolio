@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
-    "next": "^14.3.0-canary.76",
-    "react": "^19.0.0-rc-81c5ff2e04-20240521",
+    "next": "^15.0.1",
+    "react": "^18.3.1",
     "react-animate-on-scroll": "^2.1.7",
-    "react-dom": "^19.0.0-rc-81c5ff2e04-20240521",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.12.0",
     "typed.js": "^2.1.0"
   },
